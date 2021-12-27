@@ -1,9 +1,11 @@
 
 
-export default function Hello(){
+const contact = () => {
     return(
         <>
-            <p>Hello.js</p>
+            <p>Contact Page</p>
         </>
     )
 }
+
+export default contact

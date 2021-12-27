@@ -1,70 +1,69 @@
 import styled from "styled-components"
 import Link from "next/link"
 import { useState, useRouter } from "next/router"
+import { useColorMode } from "@chakra-ui/react"
+import { Flex, Center, Spacer, Button } from "@chakra-ui/react"
+import { SunIcon, MoonIcon } from '@chakra-ui/icons'
 
+const Header = () => {
 
-export default function Header({theme}){
-
+    const { colorMode, toggleColorMode } = useColorMode()
     const router = useRouter();
-    // const [toggle, setToggle] = useState(false);
-
 
     return(
         
-            <HeaderWrap>
-                <NavStyled>
-                    <UlStyled>
-                        <li>
-                            <Link href='/'><a className={router.pathname === '/' ? 'active' : ''}>Home</a></Link>
-                        </li>
-                        <li>
-                            <Link href='/about'><a className={router.pathname === '/about' ? 'active' : ''}>About</a></Link>
-                        </li>
-                        <li>
-                            <Link href='/skill'><a className={router.pathname === '/skill' ? 'active' : ''}>Skill</a></Link>
-                        </li>
-                        <li>
-                            <Link href='/portfolio'><a className={router.pathname === '/portfolio' ? 'active' : ''}>Portfolio</a></Link>
-                        </li>
-                        <li>
-                            <Link href='/contact'><a className={router.pathname === '/contact' ? 'active' : ''}>Contact</a></Link>
-                        </li>
-                    </UlStyled>
-                </NavStyled>
-            </HeaderWrap>
-        
+        <HeaderStyled>
+
+            <Flex h='100%'>
+                <Center w="80px" h='100%'>
+                    <Link href="/" passHref><Logo><h1>&#60;꾸&#47;&#62;</h1></Logo></Link>
+                </Center>
+                <Spacer/>
+                <Center w="700px" h='100%'>
+                    <Link href='/' passHref>
+                        <LinkStyled className={router.pathname === '/' ? 'focus' : ''}>Home</LinkStyled>
+                    </Link>
+                    <Link href='/skill' passHref>
+                        <LinkStyled className={router.pathname === '/skill' ? 'focus' : ''}>Skill</LinkStyled>
+                    </Link>
+                    <Link href='/portfolio' passHref>
+                        <LinkStyled className={router.pathname === '/portfolio' ? 'focus' : ''}>Portfolio</LinkStyled>
+                    </Link>
+                    <Link href='/contact' passHref>
+                        <LinkStyled className={router.pathname === '/contact' ? 'focus' : ''}>Contact</LinkStyled>
+                    </Link>
+                </Center>
+
+                <Center>
+                    <ToggleStyled onClick={toggleColorMode} bg={colorMode === 'light' ? 'blackAlpha.200' : 'gray.500'}>
+                        {colorMode === 'light' ? <SunIcon /> : <MoonIcon/>}
+                    </ToggleStyled>
+                </Center>
+            </Flex>
+
+        </HeaderStyled>
     )
 }
 
-const HeaderWrap = styled.header`
-    position: relative;
+const HeaderStyled = styled.header`
     max-width: 1080px; height: 70px;
-    text-align: center;
 `
-const NavStyled = styled.nav`
-    position: absolute; top: 50%; left: 50%; 
-    transform: translate(-50%, -50%); width: 100%; white-space: nowrap;
+const Logo = styled.a`
+    font-size: 2em;
+    font-weight: bold;
+`
+const LinkStyled = styled.a`
+    position: relative; padding: 5px 10px;
+    transition: border .6s ease;
+    &:hover { border-bottom: 1px solid #000; }
+    &.focus{ font-weight: bold; }
 `
 
-const UlStyled = styled.ul`
-    display: inline-block; list-style: none; padding-left: 0; 
-    
-    &>li{
-        display: inline-block; position: relative;
-        margin-right: 40px;
-    }
-    &>li:last-child{ margin-right: 0; }
-    &>li>a{
-        display: inline-block;
-        font-size: 20px;
-        padding: 7px 7px; transition: width: 0.3s ease;
-    }
-    &>li>a:after{
-        content: ''; position: absolute; left: 0; bottom: 0; width: 0%; height: 2px; 
-        background-color: #000; transition: width 0.5s ease;
-    }
-    &>li>.active{ font-weight: bold; }
-    &>li>.active:after, &>li>a:hover :after{ 
-        width: 100%; 
-    }
+const ToggleStyled = styled(Button)`
+    width: 40px; height: 40px; border-radius: 50%; padding: 0;
+    &>svg{ font-size: 22px; }
 `
+
+
+export default Header
+

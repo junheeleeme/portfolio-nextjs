@@ -1,9 +1,13 @@
+import { Box } from "@chakra-ui/react"
 
-
-export default function Hello(){
+ const skill = () => {
     return(
         <>
-            <p>Hello.js</p>
+            <Box>
+                <p>Skill page</p>
+            </Box>
         </>
     )
 }
+
+export default skill

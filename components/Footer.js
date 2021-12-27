@@ -20,7 +20,7 @@ export default function Footer(){
 
 }
 
-const FooterWrap = styled.div`
+const FooterWrap = styled.section`
     max-width: 1080px;
     height: 30px;
     text-align: center;

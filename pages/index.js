@@ -1,7 +1,7 @@
 import Typewriter from 'typewriter-effect';
 import styled from 'styled-components';
 
-export default function Home() {
+const index = ()=> {
   return (
     
     <>
@@ -21,7 +21,6 @@ export default function Home() {
 
   )
 }
-
 
 const TyperWrap = styled.section`
     display: block;
@@ -50,3 +49,5 @@ const TyperWrap = styled.section`
         }
     }
 `
+
+export default index

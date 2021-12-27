@@ -1,6 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
-
+import { ColorModeScript } from '@chakra-ui/react';
+import theme from '../theme/theme';
 
 // head에 들어갈 태그 및 폰트, 
 
@@ -12,7 +13,7 @@ export default class MyDocument extends Document {
 
     try {
         ctx.renderPage = () => originalRenderPage({
-        enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />),
+            enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />),
         });
 
         const initialProps = await Document.getInitialProps(ctx);
@@ -20,8 +21,8 @@ export default class MyDocument extends Document {
         ...initialProps,
         styles: (
             <>
-            {initialProps.styles}
-            {sheet.getStyleElement()}
+                {initialProps.styles}
+                {sheet.getStyleElement()}
             </>
         ),
         };
@@ -35,7 +36,6 @@ export default class MyDocument extends Document {
         <Html lang="ko">
 
             <Head>
-                <title>꾸생의 Portfolio</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
                 <meta name="HandheldFriendly" content="true" />
                 <meta name="theme-color" content="#000000" />
@@ -49,10 +49,11 @@ export default class MyDocument extends Document {
                 <meta property="og:type" content="website" />
                 <meta property="og:image" content="https://www.juni-official.com/static/media/logo.06f29f67.png"></meta>
                 
-                <style />
+                <title>꾸생의 Portfolio</title>
             </Head>
 
             <body>
+                <ColorModeScript initialColorMode={theme.config.initialColorMode}/>
                 <Main/>
                 <NextScript />
             </body>
