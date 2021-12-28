@@ -10,7 +10,8 @@ const Wrapper = ({children}) => {
 
     const router = useRouter();
     const { colorMode } = useColorMode();
-    
+    const maxWid = router.pathname === '/' ? '1200px' : '960px';
+
     return(
         <>
             <Box w='100vw' minH='100vh' bg={ colorMode === 'light' ? 'gray.50' : 'whiteAlpha.200'}> 
@@ -18,7 +19,7 @@ const Wrapper = ({children}) => {
             <Header/>
             <AnimatePresence exitBeforeEnter={true}>    
                 <motion.div key={router.route} transition={{ ease: "easeInOut", duration: 0.35}} initial={animate.initial} animate={animate.animate} exit={animate.exit}>
-                    <Box maxW='1200px' minH='calc(100vh - 110px)' p='40px' > 
+                    <Box maxW={maxWid} minH='calc(100vh - 110px)' p='80px 20px 20px 20px'> 
                         {children}
                     </Box>
                 </motion.div>

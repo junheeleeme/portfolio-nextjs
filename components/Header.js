@@ -1,22 +1,31 @@
 import styled from "styled-components"
 import Link from "next/link"
-import { useState, useRouter } from "next/router"
+import {  useRouter } from "next/router"
 import { useColorMode } from "@chakra-ui/react"
+import Image from "next/image"
 import { Box, Flex, Center, Spacer, Button } from "@chakra-ui/react"
 import { SunIcon, MoonIcon } from '@chakra-ui/icons'
+import Logo from '../public/logo.png';
+import { useEffect } from "react"
 
 const Header = () => {
 
     const { colorMode, toggleColorMode } = useColorMode()
     const router = useRouter();
 
+    const maxWid = router.pathname === '/' ? 1200 : 960;
+    
     return(
         
         <HeaderStyle>
-            <Box maxW="1200px" h='70px' p='0 20px'>
+            <HeaderWrap mw={maxWid}>
                 <Flex h='100%'>
-                    <Center w="80px" h='100%'>
-                        <Link href="/" passHref><Logo><h1>&#60;꾸&#47;&#62;</h1></Logo></Link>
+                    <Center w="60px" h='100%'>
+                        <Link href="/" passHref>
+                            <LogoLink>
+                                <Image src={Logo} alt="Logo" />
+                            </LogoLink>
+                        </Link>
                     </Center>
                     <Spacer/>
                     <Center w="400px" h='100%'>
@@ -45,7 +54,7 @@ const Header = () => {
                         </ToggleStyled>
                     </Center>
                 </Flex>
-            </Box>
+            </HeaderWrap>
         </HeaderStyle>
     )
 }
@@ -53,9 +62,13 @@ const Header = () => {
 const HeaderStyle = styled.header`
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 `
+const HeaderWrap = styled.div`
+    height: 70px; padding: 0 20px; transition: max-width 1s ease; max-width: ${props=>props.mw}px;
+`
 
-const Logo = styled.a`
-    font-size: 2em;
+
+const LogoLink = styled.a`
+    font-size: 2em; height: 40px;
     font-weight: bold;
 `
 const LinkStyled = styled.a`

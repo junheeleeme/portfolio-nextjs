@@ -10,7 +10,6 @@ const MyApp = ({ Component, pageProps }) => {
 
   return (
     <ChakraProvider theme={theme}>
-      
       <Wrapper>
         <Component {...pageProps}/>
       </Wrapper>
