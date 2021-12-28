@@ -36,6 +36,7 @@ export default class MyDocument extends Document {
         <Html lang="ko">
 
             <Head>
+            
                 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
                 <meta name="HandheldFriendly" content="true" />
                 <meta name="theme-color" content="#000000" />
@@ -50,6 +51,7 @@ export default class MyDocument extends Document {
                 <meta property="og:image" content="https://www.juni-official.com/static/media/logo.06f29f67.png"></meta>
                 
                 <title>꾸생의 Portfolio</title>
+
             </Head>
 
             <body>

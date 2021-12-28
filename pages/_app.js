@@ -9,12 +9,15 @@ import { createBreakpoints } from '@chakra-ui/theme-tools'
 const MyApp = ({ Component, pageProps }) => {
 
   return (
-    <ChakraProvider theme={theme}>
-      <Wrapper>
-        <Component {...pageProps}/>
-      </Wrapper>
-      
-    </ChakraProvider>
+    <>
+
+      <ChakraProvider theme={theme}>
+        <Wrapper>
+          <Component {...pageProps}/>
+        </Wrapper>
+        
+      </ChakraProvider>
+    </>
   )
   
 }

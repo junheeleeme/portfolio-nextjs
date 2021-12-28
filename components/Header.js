@@ -1,12 +1,12 @@
 import styled from "styled-components"
 import Link from "next/link"
-import {  useRouter } from "next/router"
+import { useRouter } from "next/router"
 import { useColorMode } from "@chakra-ui/react"
 import Image from "next/image"
-import { Box, Flex, Center, Spacer, Button } from "@chakra-ui/react"
+import { Flex, Center, Spacer, Button } from "@chakra-ui/react"
 import { SunIcon, MoonIcon } from '@chakra-ui/icons'
 import Logo from '../public/logo.png';
-import { useEffect } from "react"
+
 
 const Header = () => {
 

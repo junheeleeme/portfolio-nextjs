@@ -18,8 +18,8 @@ const Wrapper = ({children}) => {
 
             <Header/>
             <AnimatePresence exitBeforeEnter={true}>    
-                <motion.div key={router.route} transition={{ ease: "easeInOut", duration: 0.35}} initial={animate.initial} animate={animate.animate} exit={animate.exit}>
-                    <Box maxW={maxWid} minH='calc(100vh - 110px)' p='80px 20px 20px 20px'> 
+                <motion.div key={router.route} transition={{ ease: "easeInOut", duration: 0.44}} initial={animate.initial} animate={animate.animate} exit={animate.exit}>
+                    <Box maxW={maxWid} minH='calc(100vh - 110px)' p='60px 20px 20px 20px'> 
                         {children}
                     </Box>
                 </motion.div>
