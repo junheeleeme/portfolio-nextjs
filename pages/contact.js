@@ -1,13 +1,15 @@
 import styled from "styled-components"
-import { Heading } from "@chakra-ui/react"
 import SubTitle from "../components/subtitle"
+import WrapAni from "../components/wrapAni"
 
 const contact = () => {
 
     return(
         <>
             <SubTitle>Contact</SubTitle>
-            <p>Contact Page</p>
+            <WrapAni>
+                Content Page
+            </WrapAni>
         </>
     )
 }
