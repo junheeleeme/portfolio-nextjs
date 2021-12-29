@@ -11,7 +11,7 @@ const WrapAni = ({children}) => {
 }
 
 const WrapBox = styled(Box)`
-    animation: slideLeft 0.6s 0.6s ease forwards; opacity: 0; overflow: hidden;
+    animation: slideLeft 0.6s 0.7s ease forwards; opacity: 0; overflow: hidden;
     @keyframes slideLeft{
         0%{ opacity: 0; transform: translateY(40px); }
         100%{ opacity: 1; transform: translateY(0); }

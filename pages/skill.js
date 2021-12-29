@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import SubTitle from "../components/subtitle"
 import WrapAni from "../components/wrapAni"
-import { List, ListItem, ListIcon, Center, Heading, Tooltip, Box } from "@chakra-ui/react"
+import { List, ListItem, ListIcon, Center, Heading, Tooltip } from "@chakra-ui/react"
 import { CheckCircleIcon } from "@chakra-ui/icons"
 import { FaReact, FaNodeJs } from 'react-icons/fa';
 import { SiJavascript, SiHtml5, SiCss3, SiJquery, SiStyledcomponents, SiNextdotjs, SiMongodb, SiRedux, SiAmazonaws, SiMysql } from 'react-icons/Si';
@@ -9,7 +9,6 @@ import { SiJavascript, SiHtml5, SiCss3, SiJquery, SiStyledcomponents, SiNextdotj
 
 const skill = () => {
     
-
     return(
         <>
             <SubTitle>Skill</SubTitle>
@@ -72,7 +71,7 @@ const skill = () => {
                 </Center>
 
 
-                <Center p='30px 0 30px 0'>
+                <Center p='30px 0 50px 0'>
                     <List spacing={3} fontSize='1.2em'>
                         <ListItem>
                             <ListIcon as={CheckCircleIcon} color='green.500' />웹표준, 웹 접근성 및 SEO를 고려한 시멘틱 마크업 작업이 가능합니다.
