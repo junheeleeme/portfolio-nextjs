@@ -16,9 +16,9 @@ const skill = () => {
 
             <WrapAni>
 
-                <Heading as="h3" fontSize='1.7em' p='10px 0 30px 0'>💁🏻‍♂️ 기술 스택</Heading>
+                <Heading as="h3" fontSize='1.7em' p={{ base : '10px 0 20px' , md : '10px 0 30px 0'}}>💁🏻‍♂️ 기술 스택</Heading>
 
-                <Center p='30px 0' flexWrap='wrap' justifyContent='space-around'>
+                <Center p='20px 0 40px' flexWrap='wrap' justifyContent='space-around'>
                     <Tooltip label='JavaScript' w='100%'>
                         <SvgWrap><SiJavascript color="#f7e018"/></SvgWrap>
                     </Tooltip>
@@ -46,8 +46,8 @@ const skill = () => {
                     
                 </Center>
 
-                <Heading as="h3" fontSize='1.7em' p='20px 0'>🙋🏻‍♂️ 사용해본 기술 스택</Heading>
-                <Center p='30px 0' flexWrap='wrap' justifyContent='space-around'>    
+                <Heading as="h3" fontSize='1.7em' p={{ base : '10px 0 20px' , md : '30px 0 30px 0'}}>🙋🏻‍♂️ 사용해본 기술 스택</Heading>
+                <Center p={{ base : '20px 0 20px' , md : '20px 0 40px 0'}} flexWrap='wrap' justifyContent='space-around'>    
                     <Center>
                         <Tooltip label='AWS EC2'>
                             <SvgWrap><SiAmazonaws color="#ff9a02" /></SvgWrap>

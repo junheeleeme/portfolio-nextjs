@@ -8,7 +8,8 @@ const SubTitle = ({children}) => {
     return(
         <>
             <HeadingWrap>
-                <Heading as='h2' display={{ base: 'block' ,xl : 'none'}} position='relative' display='block' size='3xl' p='0 0 40px 0'>
+                <Heading as='h2' display={{ base: 'block' ,xl : 'none'}} position='relative' display='block' size='3xl'
+                    pb={{ base : '30px' ,md:'40px'}}>
                     {children}
                 </Heading>
             </HeadingWrap>
