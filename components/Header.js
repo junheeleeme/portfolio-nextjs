@@ -60,8 +60,8 @@ const Header = () => {
 }
 
 const HeaderStyle = styled.header`
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 `
+
 const HeaderWrap = styled.div`
     height: 70px; padding: 0 20px; transition: max-width 1s ease; max-width: ${props=>props.mw}px;
 `
@@ -72,10 +72,16 @@ const LogoLink = styled.a`
     font-weight: bold;
 `
 const LinkStyled = styled.a`
-    position: relative; padding: 5px 10px;
+    position: relative; padding: 5px 5px;
     transition: border .6s ease;
-    &:hover { border-bottom: 1px solid #000; }
-    &.focus{ font-weight: bold; border-bottom: 1px solid #000; }
+    &:after{ 
+        content: ''; position: absolute; bottom: 0; left: 0; 
+        width: 0%; height: 1px; background-color: #000;
+        transition: 0.5s ease;
+    }
+    &:hover :after { width: 100%; }
+    &.focus { font-weight: bold; }
+    &.focus :after{  width: 100%; height: 2px; }
 `
 
 const ToggleStyled = styled(Button)`

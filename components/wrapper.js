@@ -14,12 +14,12 @@ const Wrapper = ({children}) => {
 
     return(
         <>
-            <Box w='100vw' minH='100vh' bg={ colorMode === 'light' ? 'gray.50' : 'whiteAlpha.200'}> 
+            <Box w='100vw' minH='100vh' bg={ colorMode === 'light' ? 'gray.100' : 'whiteAlpha.200'}> 
 
             <Header/>
             <AnimatePresence exitBeforeEnter={true}>    
-                <motion.div key={router.route} transition={{ ease: "easeInOut", duration: 0.44}} initial={animate.initial} animate={animate.animate} exit={animate.exit}>
-                    <Box maxW={maxWid} minH='calc(100vh - 110px)' p='60px 20px 20px 20px'> 
+                <motion.div key={router.route} transition={{ ease: "easeInOut", duration: 0.44}} animate={animate.animate} exit={animate.exit}>
+                    <Box maxW={maxWid} minH='calc(100vh - 110px)' p={{ base : '15px', xl : '50px 15px 15px 15px' }} position='relative'> 
                         {children}
                     </Box>
                 </motion.div>
@@ -32,7 +32,7 @@ const Wrapper = ({children}) => {
 }
 
 const animate = {
-    initial :{ 
+    initial :{ //none use
         transform : `translateY(40px)`,
         opacity : 0,
     },

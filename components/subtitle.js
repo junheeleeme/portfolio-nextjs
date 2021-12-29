@@ -1,15 +1,14 @@
-import { Heading, useColorMode } from "@chakra-ui/react"
+import { Heading } from "@chakra-ui/react"
 import { Box } from "@chakra-ui/react";
 import styled from "styled-components";
 
 const SubTitle = ({children}) => {
 
-    const { colorMode } = useColorMode();
 
     return(
         <>
             <HeadingWrap>
-                <Heading as='h2' position='relative' display='block' size='3xl' p='0 0 40px 0'>
+                <Heading as='h2' display={{ base: 'block' ,xl : 'none'}} position='relative' display='block' size='3xl' p='0 0 40px 0'>
                     {children}
                 </Heading>
             </HeadingWrap>
@@ -19,7 +18,7 @@ const SubTitle = ({children}) => {
 }
 
 const HeadingWrap = styled(Box)`
-    animation: slideRight 1s .5s ease forwards; opacity: 0;
+    animation: slideRight 0.6s 0.4s ease forwards; opacity: 0;
     @keyframes slideRight{
         0%{ opacity: 0; transform: translateX(-40px); }
         100%{ opacity: 1; transform: translateX(0); }

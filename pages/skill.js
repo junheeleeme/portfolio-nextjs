@@ -4,7 +4,7 @@ import WrapAni from "../components/wrapAni"
 import { List, ListItem, ListIcon, Center, Heading, Tooltip, Box } from "@chakra-ui/react"
 import { CheckCircleIcon } from "@chakra-ui/icons"
 import { FaReact, FaNodeJs } from 'react-icons/fa';
-import { SiJavascript, SiHtml5, SiCss3, SiJquery, SiStyledcomponents, SiNextdotjs, SiMongodb, SiRedux, SiAmazonaws } from 'react-icons/Si';
+import { SiJavascript, SiHtml5, SiCss3, SiJquery, SiStyledcomponents, SiNextdotjs, SiMongodb, SiRedux, SiAmazonaws, SiMysql } from 'react-icons/Si';
 
 
 const skill = () => {
@@ -13,40 +13,41 @@ const skill = () => {
     return(
         <>
             <SubTitle>Skill</SubTitle>
-            
-            <WrapAni>
-                <Center p='30px 0'>
 
-                    <Heading as="h3" fontSize='1.7em' pr='10px'>💁🏻‍♂️ 기술 스택 : </Heading>
-                    <Tooltip label='JavaScript'>
+            <WrapAni>
+
+                <Heading as="h3" fontSize='1.7em' p='10px 0 30px 0'>💁🏻‍♂️ 기술 스택</Heading>
+
+                <Center p='30px 0' flexWrap='wrap' justifyContent='space-around'>
+                    <Tooltip label='JavaScript' w='100%'>
                         <SvgWrap><SiJavascript color="#f7e018"/></SvgWrap>
                     </Tooltip>
-                    <Tooltip label='React'>
+                    <Tooltip label='React' w='100%'>
                         <SvgWrap><FaReact color="#61dafb" /></SvgWrap>
                     </Tooltip>
-                    <Tooltip label='Styled Components'>
+                    <Tooltip label='Styled Components' w='100%'>
                         <SvgWrap><SiStyledcomponents color="#fe9ae4"/></SvgWrap>
                     </Tooltip>
-                    <Tooltip label='Next.JS'>
+                    <Tooltip label='Next.JS' w='100%'>
                         <SvgWrap><SiNextdotjs /></SvgWrap>
                     </Tooltip>
-                    <Tooltip label='Node.JS'>
+                    <Tooltip label='Node.JS' w='100%'>
                         <SvgWrap><FaNodeJs color="#8bc500" /></SvgWrap>
                     </Tooltip>
-                    <Tooltip label='HTML5'>
+                    <Tooltip label='HTML5' w='100%'>
                         <SvgWrap><SiHtml5 color="#ff5723" /></SvgWrap>
                     </Tooltip>
-                    <Tooltip label='CSS3'>
+                    <Tooltip label='CSS3' w='100%'>
                         <SvgWrap><SiCss3 color="#007bc9" /></SvgWrap>
                     </Tooltip>
-                    <Tooltip label='JQuery'>
+                    <Tooltip label='JQuery' w='100%'>
                         <SvgWrap><SiJquery color="#2e68a8" /></SvgWrap>
                     </Tooltip>    
                     
                 </Center>
-                <Center p='30px 0'>    
-                    <Heading as="h3" fontSize='1.7em' pr='10px'>🙋🏻‍♂️ 사용해본 기술 스택 : </Heading>
 
+                <Heading as="h3" fontSize='1.7em' p='20px 0'>🙋🏻‍♂️ 사용해본 기술 스택</Heading>
+                <Center p='30px 0' flexWrap='wrap' justifyContent='space-around'>    
                     <Center>
                         <Tooltip label='AWS EC2'>
                             <SvgWrap><SiAmazonaws color="#ff9a02" /></SvgWrap>
@@ -62,11 +63,17 @@ const skill = () => {
                             <SvgWrap><SiMongodb color="#13aa52"/></SvgWrap>
                         </Tooltip>
                     </Center>
+                    <Center>
+                        <Tooltip label='Mongo DB'>
+                            <SvgWrap><SiMysql color="#01618a"/></SvgWrap>
+                        </Tooltip>
+                        <SiMysql/>
+                    </Center>
                 </Center>
 
 
-                <Center p='50px 0'>
-                    <List spacing={3} fontSize='1.3em'>
+                <Center p='30px 0 30px 0'>
+                    <List spacing={3} fontSize='1.2em'>
                         <ListItem>
                             <ListIcon as={CheckCircleIcon} color='green.500' />웹표준, 웹 접근성 및 SEO를 고려한 시멘틱 마크업 작업이 가능합니다.
                         </ListItem>
@@ -84,13 +91,14 @@ const skill = () => {
                         </ListItem>
                     </List>
                 </Center>
+
             </WrapAni>
         </>
     )
 }
 
 const SvgWrap = styled.div`
-    position: relative; width: 80px; height: 80px; display: inline-block; margin: 5px;
+    position: relative; width: 80px; height: 80px; display: inline-block; margin: 10px 5px;
     &>svg{ width: 80px; height: 80px; }
 `
 
