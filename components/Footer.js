@@ -27,6 +27,6 @@ const FooterWrap = styled.section`
     &>p{
         line-height: 30px;
         font-size: 14px;
-        color: #b6b6b6;
+        color: #747474;
     }
 `

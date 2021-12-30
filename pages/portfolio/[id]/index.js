@@ -14,7 +14,7 @@ export const getServerSideProps = async ({params}) => {
     const {id} = params;
 
     try{
-        const res = await axios.get('http://localhost:3000/portfolio.json');
+        const res = await axios.get('http://localhost:3000/pofol/portfolio.json');
         
         if(res.status === 200){
             const _data = res.data;

@@ -3,8 +3,7 @@ import SubTitle from "../components/subtitle"
 import WrapAni from "../components/wrapAni"
 import { List, ListItem, ListIcon, Center, Heading, Tooltip } from "@chakra-ui/react"
 import { CheckCircleIcon } from "@chakra-ui/icons"
-import { FaReact, FaNodeJs } from 'react-icons/fa';
-import { SiJavascript, SiHtml5, SiCss3, SiJquery, SiStyledcomponents, SiNextdotjs, SiMongodb, SiRedux, SiAmazonaws, SiMysql } from 'react-icons/Si';
+import { SiReact, SiJavascript, SiNodedotjs, SiHtml5, SiCss3, SiJquery, SiStyledcomponents, SiNextdotjs, SiMongodb, SiRedux, SiAmazonaws, SiMysql } from 'react-icons/Si';
 
 
 const skill = () => {
@@ -22,7 +21,7 @@ const skill = () => {
                         <SvgWrap><SiJavascript color="#f7e018"/></SvgWrap>
                     </Tooltip>
                     <Tooltip label='React' w='100%'>
-                        <SvgWrap><FaReact color="#61dafb" /></SvgWrap>
+                        <SvgWrap><SiReact color="#61dafb" /></SvgWrap>
                     </Tooltip>
                     <Tooltip label='Styled Components' w='100%'>
                         <SvgWrap><SiStyledcomponents color="#fe9ae4"/></SvgWrap>
@@ -31,7 +30,7 @@ const skill = () => {
                         <SvgWrap><SiNextdotjs /></SvgWrap>
                     </Tooltip>
                     <Tooltip label='Node.JS' w='100%'>
-                        <SvgWrap><FaNodeJs color="#8bc500" /></SvgWrap>
+                        <SvgWrap><SiNodedotjs color="#8bc500" /></SvgWrap>
                     </Tooltip>
                     <Tooltip label='HTML5' w='100%'>
                         <SvgWrap><SiHtml5 color="#ff5723" /></SvgWrap>
