@@ -5,7 +5,7 @@ const index = ()=> {
   return (
     
     <>
-      <TyperWrap>
+      {/* <TyperWrap>
         <Typewriter
             options={{
                 strings: ['﹤ PORTFOLIO／﹥', `﹤ I'm Front-End Developer／﹥`, `﹤ I'm Web Developer／﹥`],
@@ -16,7 +16,7 @@ const index = ()=> {
                 pauseFor : 3000,
             }}
         />
-      </TyperWrap>
+      </TyperWrap> */}
     </>
 
   )

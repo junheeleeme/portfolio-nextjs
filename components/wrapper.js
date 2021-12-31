@@ -14,7 +14,7 @@ const Wrapper = ({children}) => {
 
     return(
         <>
-            <Box w='100vw' minH='100vh' bg={ colorMode === 'light' ? 'gray.100' : 'whiteAlpha.200'}> 
+            <Box w='100vw' minH='100vh' bg={ colorMode === 'light' ? 'gray.100' : 'gray.800'}> 
 
             <Header/>
             <AnimatePresence exitBeforeEnter={true}>    

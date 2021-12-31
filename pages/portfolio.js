@@ -43,7 +43,7 @@ const portfolio = ({data}) => {
                                     <Link href={`/portfolio/${p.id+1}`} passHref><a></a></Link>
                                     <SubWrap className='subTitle' h='40px' p={{base : '7px', lg: ' 7px 10px'}}>
                                         <Link href={`/portfolio/${p.id+1}`} passHref><a></a></Link>
-                                        <Box fontSize='0'><Image src='/logo.png' display='inline-block' w='45px' h='100%' mr='5px'/></Box>
+                                        <Box fontSize='0'><Image src='/logo_white.png' display='inline-block' w='45px' h='100%' mr='5px'/></Box>
                                         <Box fontSize='1.2em' fontWeight='bold' h='100%' whiteSpace='nowrap' textOverflow='ellipsis' overflow='hidden'>{p.title}</Box>
                                         <Spacer/>
                                         <Box fontSize='1em'><ArrowForwardIcon/></Box>
@@ -106,17 +106,20 @@ const DivStyled = styled.div`
     }
 `
 const BoxWrap = styled(Box)`
-    .swiper-slide-visible{ 
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    }
+    .swiper-slide-visible{ box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; }
     .swiper-slide-active:hover a{ height: 100%; opacity: 1; }
     .swiper-slide-active:hover .thumb{ transform: translateY(-30px); }
     .swiper-slide-active:hover .subTitle{ bottom: 0; }
+    .swiper-coverflow{ height: 430px; }
+    @media screen and (max-width: 768px){
+        .swiper-coverflow{ height: 280px; }
+    }
+    
 `
 const SubWrap = styled(Flex)`
-    position: absolute; bottom: -50px; left: 0; width: 100%; background-color: #fff;
-    color: #000; line-height: 1.5em;
-    transition: bottom 0.3s ease; z-index: 110;
+    position: absolute; bottom: -50px; left: 0; width: 100%;
+    color: #000; 
+    transition: bottom 0.3s ease; background: #fff; z-index: 110;
     &>a{
         position: absolute; top: 0; left: 0; width: 100%; height: 100%;
     }
