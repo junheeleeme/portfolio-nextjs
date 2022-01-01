@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import SubTitle from "../components/subtitle"
-import WrapAni from "../components/wrapAni"
+import SlideAnimation from "../components/slideAnimation"
 import { List, ListItem, ListIcon, Center, Heading, Tooltip } from "@chakra-ui/react"
 import { CheckCircleIcon } from "@chakra-ui/icons"
 import { SiReact, SiJavascript, SiNodedotjs, SiHtml5, SiCss3, SiJquery, SiStyledcomponents, SiNextdotjs, SiMongodb, SiRedux, SiAmazonaws, SiMysql } from 'react-icons/Si';
@@ -12,7 +12,7 @@ const skill = () => {
         <>
             <SubTitle>Skill</SubTitle>
 
-            <WrapAni>
+            <SlideAnimation>
 
                 <Heading as="h3" fontSize='1.7em' p={{ base : '10px 0 20px' , md : '10px 0 30px 0'}}>💁🏻‍♂️ 기술 스택</Heading>
 
@@ -90,7 +90,7 @@ const skill = () => {
                     </List>
                 </Center>
 
-            </WrapAni>
+            </SlideAnimation>
         </>
     )
 }

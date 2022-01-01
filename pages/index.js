@@ -1,10 +1,15 @@
 import Typewriter from 'typewriter-effect';
 import styled from 'styled-components';
+import SlideAnimation from '../components/slideAnimation';
 
 const index = ()=> {
   return (
     
     <>
+      <SlideAnimation>
+        Hello
+      </SlideAnimation>
+      
       {/* <TyperWrap>
         <Typewriter
             options={{

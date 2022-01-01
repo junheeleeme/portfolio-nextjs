@@ -1,5 +1,5 @@
 import SubTitle from "../components/subtitle"
-import WrapAni from "../components/wrapAni"
+import SlideAnimation from "../components/slideAnimation"
 import { useToast as UseToast } from '@chakra-ui/react'
 import { useRef as UseRef } from "react"
 import { Heading, List, ListItem, Input, Link, Box, Tooltip } from "@chakra-ui/react"
@@ -30,7 +30,7 @@ const contact = () => {
             <SubTitle>Contact</SubTitle>
             
             <Box position='absolute' bottom='50px' left='15px' overflow='hidden'>
-            <WrapAni> 
+            <SlideAnimation> 
                 <Heading as='h3' size='3xl' pb='50px' wordBreak='keep-all' lineHeight='1.2em'>방문해 주셔서 감사합니다.</Heading>
                 <List spacing={2} fontSize="1.3em">
                     <ListItem>
@@ -51,7 +51,7 @@ const contact = () => {
                 </List>
                 <Input position="absolute" bottom='-9999px' type="text" defaultValue="macjjuni@gmail.com" ref={email} readOnly/>
                 <Input position="absolute" bottom='-9999px' type="text" defaultValue="010-5183-1652" ref={phone} readOnly/>
-            </WrapAni>
+            </SlideAnimation>
             </Box>
 
             

@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 import { useColorMode } from "@chakra-ui/react"
 import { AnimatePresence } from 'framer-motion'
 
-const Wrapper = ({children}) => {
+const WrapAnimation = ({children}) => {
 
     const router = useRouter();
     const { colorMode } = useColorMode();
@@ -17,8 +17,8 @@ const Wrapper = ({children}) => {
             <Box w='100vw' minH='100vh' bg={ colorMode === 'light' ? 'gray.100' : 'gray.800'}> 
 
             <Header/>
-            <AnimatePresence exitBeforeEnter={true}>    
-                <motion.div key={router.route} transition={{ ease: "easeInOut", duration: 0.44}} animate={animate.animate} exit={animate.exit}>
+            <AnimatePresence>
+                <motion.div key={router.route} transition={{ ease: "easeInOut", duration: 0.5 }} animate={animate.animate} exit={animate.exit}>
                     <Box maxW={maxWid} minH='calc(100vh - 110px)' p={{ base : '15px', xl : '50px 15px 15px 15px' }} position='relative'> 
                         {children}
                     </Box>
@@ -46,4 +46,4 @@ const animate = {
     }
 }
 
-export default Wrapper
+export default WrapAnimation

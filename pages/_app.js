@@ -1,6 +1,5 @@
 import '../styles/globals.css'
-import Wrapper from '../components/wrapper'
-import theme from '../theme/theme'
+import WrapAnimation from '../components/WrapAnimation'
 import { extendTheme } from '@chakra-ui/react'
 import { ChakraProvider } from '@chakra-ui/react'
 import { createBreakpoints } from '@chakra-ui/theme-tools'
@@ -20,12 +19,10 @@ const MyApp = ({ Component, pageProps }) => {
 
   return (
     <>
-
       <ChakraProvider theme={theme}>
-        <Wrapper>
+        <WrapAnimation>
           <Component {...pageProps}/>
-        </Wrapper>
-        
+        </WrapAnimation>
       </ChakraProvider>
     </>
   )

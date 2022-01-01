@@ -13,7 +13,8 @@ import styled from 'styled-components';
 import Link from "next/link"
 import { Image, Box, Spacer, Flex } from "@chakra-ui/react"
 import SubTitle from "../components/subtitle"
-import WrapAni from "../components/wrapAni"
+import TopMenu from '../components/topMenu'
+import SlideAnimation from "../components/slideAnimation"
 import GridItems from "../components/griditems"
 import { ArrowForwardIcon } from '@chakra-ui/icons'
 
@@ -27,7 +28,7 @@ const portfolio = ({data}) => {
         <>
             <SubTitle>Portfolio</SubTitle>
 
-            <WrapAni>
+            <SlideAnimation>
                 <BoxWrap p={{ base: '120px 0 60px', md : '80px 0'}}>
 
                     <Swiper effect={'coverflow'} grabCursor={true} mousewheel={true} centeredSlides={true} slidesPerView={'auto'}
@@ -71,7 +72,7 @@ const portfolio = ({data}) => {
                 <Skeleton w='100%' h='20px' mb='10px'/>
                 <Skeleton w='100%' h='20px' mb='10px'/> */}
                 </BoxWrap>
-            </WrapAni>
+            </SlideAnimation>
         </>
     )
 }

@@ -1,24 +1,35 @@
+import { debounce } from 'lodash'
 import styled from "styled-components"
+
 import { useRouter } from "next/router"
-import { useState } from "react"
-import { Flex, Center, Spacer, Image, Box, Button, useColorMode } from "@chakra-ui/react"
-import { SunIcon, MoonIcon } from '@chakra-ui/icons'
+import { useState, useEffect } from "react"
 import Link from "next/link"
+import TopMenu from './topMenu'
+import { Flex, Center, Spacer, Image, Box, Button, useColorMode } from "@chakra-ui/react"
 
 
 const Header = () => {
 
     const { colorMode, toggleColorMode } = useColorMode();
-    const [menu, setMenu] = useState(false);
+    const [mobile, setMobile] = useState();
+    const [toggle, setToggle] = useState(false);
     const router = useRouter();
     const maxWid = router.pathname === '/' ? 1200 : 960;
 
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+    }, []);
+
+    const handleResize = debounce(() => {
+        console.log('change')
+    }, 250);
+
     const toggleMenu = () => {
-        if(menu === true) setMenu(false);
-        else setMenu(true);
+        if(toggle === true) setToggle(false);
+        else setToggle(true);
     }
     const movePage = () => {
-        setMenu(false);
+        setToggle(false);
     }
 
     return(
@@ -40,19 +51,14 @@ const Header = () => {
                     </Center>
                     <Spacer/>
                     <Button display={{base: 'block', md :'none'}} onClick={toggleMenu}>❖</Button>
-                    <Center display={{base: 'block', md: 'flex'}} position={{base: 'fixed', md: 'relative'}} top={{base: '70px', md: 'auto'}} left={{base : '0', md:'auto'}} opacity={menu === false ? { base: '0', md : "1"} : { base: '1', md: '1'}}
-                            w={{ base: '100vw', md : "400px"}} h={menu === false ? { base: '0', md : "100%"} : { base: '100vh', md: '100%'}} overflow='hidden' zIndex={{base: 999, md: 'auto'}} transition='opacity 0.5s ease, transform 0.5s ease' bg={ colorMode === 'light' ? 'gray.100' : 'gray.800'}
-                            transform={menu === false ? { base: 'translateY(-30px)', md : "none"} : { base : 'translateY(0px)' , md : 'translateY(-30px)'}}>
-
-                        <Link href='/' passHref ><LinkStyled className={router.pathname === '/' ? 'focus' : ''} onClick={movePage}>Home</LinkStyled></Link>
-                        <Link href='/skill' passHref><LinkStyled className={router.pathname === '/skill' ? 'focus' : ''} onClick={movePage}>Skill</LinkStyled></Link>
-                        <Link href='/portfolio' passHref><LinkStyled className={router.pathname === '/portfolio' ? 'focus' : ''} onClick={movePage}>Portfolio</LinkStyled></Link>
-                        <Link href='/contact' passHref><LinkStyled className={router.pathname === '/contact' ? 'focus' : ''} onClick={movePage}>Contact</LinkStyled></Link>
-                        <ToggleStyled onClick={toggleColorMode} bg={colorMode === 'light' ? 'blackAlpha.200' : 'gray.500'}>
-                            {colorMode === 'light' ? <SunIcon /> : <MoonIcon/>}
-                        </ToggleStyled>
-
+                    
+                        {/* PC 메뉴 */}
+                    <Center display={{base: 'none', md: 'flex'}} position='relative' bg={ colorMode === 'light' ? 'gray.100' : 'gray.800'}>
+                        <TopMenu router={router} movePage={movePage} colorMode={colorMode} toggleColorMode={toggleColorMode} />
                     </Center>
+
+                        {/* 모바일 메뉴 */}
+                        {/* <TopMenu router={router} movePage={movePage} colorMode={colorMode} toggleColorMode={toggleColorMode} /> */}
 
                 </Flex>
             </HeaderWrap>
@@ -67,18 +73,7 @@ const HeaderStyle = styled.header`
 const HeaderWrap = styled.div`
     height: 70px; padding: 0 20px; transition: max-width 1s ease; max-width: ${props=>props.mw}px;
 `
-const LinkStyled = styled.a`
-    font-size: 1.2em;
-    @media screen and (max-width: 768px){
-        display: block; text-align: center;
-        padding: 20px 0;
-        
-    }
-`
-const ToggleStyled = styled(Center)`
-    width: 40px; height: 40px; border-radius: 50%; padding: 0; cursor: pointer;
-    &>svg{ font-size: 22px; }
-`
+
 
 export default Header
 
