@@ -53,7 +53,7 @@ const Header = () => {
                     <Button display={{base: 'block', md :'none'}} onClick={toggleMenu}>❖</Button>
                     
                         {/* PC 메뉴 */}
-                    <Center display={{base: 'none', md: 'flex'}} position='relative' bg={ colorMode === 'light' ? 'gray.100' : 'gray.800'}>
+                    <Center display={{base: 'none', md: 'flex'}} position='relative'>
                         <TopMenu router={router} movePage={movePage} colorMode={colorMode} toggleColorMode={toggleColorMode} />
                     </Center>
 
@@ -73,7 +73,6 @@ const HeaderStyle = styled.header`
 const HeaderWrap = styled.div`
     height: 70px; padding: 0 20px; transition: max-width 1s ease; max-width: ${props=>props.mw}px;
 `
-
 
 export default Header
 

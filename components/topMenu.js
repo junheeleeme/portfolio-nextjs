@@ -12,8 +12,9 @@ const TopMenu = ({router, movePage, colorMode, toggleColorMode }) => {
             <Link href='/portfolio' passHref><LinkStyled className={router.pathname === '/portfolio' ? 'focus' : ''} onClick={movePage}>Portfolio</LinkStyled></Link>
             <Link href='/contact' passHref><LinkStyled className={router.pathname === '/contact' ? 'focus' : ''} onClick={movePage}>Contact</LinkStyled></Link>
 
-            <ToggleStyled onClick={toggleColorMode} bg={colorMode === 'light' ? 'blackAlpha.200' : 'gray.500'}>
-                {colorMode === 'light' ? <SunIcon /> : <MoonIcon/>}
+            <ToggleStyled onClick={toggleColorMode} bg={colorMode !== 'light' ? 'light_toggleBg' : 'dark_toggleBg'}>
+            
+                {colorMode !== 'light' ? <SunIcon color="gray.900"/> : <MoonIcon color="gray.50"/>}
             </ToggleStyled>
         </>
     )
@@ -21,7 +22,7 @@ const TopMenu = ({router, movePage, colorMode, toggleColorMode }) => {
 }
 
 const LinkStyled = styled.a`
-    font-size: 1.2em; padding: 0 10px;
+    font-size: 1.2em; padding: 0 20px;
     @media screen and (max-width: 768px){
         display: block; text-align: center;
         padding: 20px 0;

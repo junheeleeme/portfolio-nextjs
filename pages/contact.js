@@ -1,5 +1,6 @@
-import SubTitle from "../components/subtitle"
+import SlideRight from "../components/slideRight"
 import SlideAnimation from "../components/slideAnimation"
+import SubTitle from "../components/subtitle"
 import { useToast as UseToast } from '@chakra-ui/react'
 import { useRef as UseRef } from "react"
 import { Heading, List, ListItem, Input, Link, Box, Tooltip } from "@chakra-ui/react"
@@ -27,7 +28,9 @@ const contact = () => {
 
     return(
         <>
-            <SubTitle>Contact</SubTitle>
+            <SlideRight>
+                <SubTitle txt='Contact' />
+            </SlideRight>
             
             <Box position='absolute' bottom='50px' left='15px' overflow='hidden'>
             <SlideAnimation> 

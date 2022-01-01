@@ -1,6 +1,7 @@
 import styled from "styled-components"
-import SubTitle from "../components/subtitle"
+import SlideRight from "../components/slideRight"
 import SlideAnimation from "../components/slideAnimation"
+import SubTitle from "../components/subtitle"
 import { List, ListItem, ListIcon, Center, Heading, Tooltip } from "@chakra-ui/react"
 import { CheckCircleIcon } from "@chakra-ui/icons"
 import { SiReact, SiJavascript, SiNodedotjs, SiHtml5, SiCss3, SiJquery, SiStyledcomponents, SiNextdotjs, SiMongodb, SiRedux, SiAmazonaws, SiMysql } from 'react-icons/Si';
@@ -10,7 +11,9 @@ const skill = () => {
     
     return(
         <>
-            <SubTitle>Skill</SubTitle>
+            <SlideRight>
+                <SubTitle txt='Skill' />
+            </SlideRight>
 
             <SlideAnimation>
 
