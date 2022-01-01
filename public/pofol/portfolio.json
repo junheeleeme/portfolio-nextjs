@@ -3,14 +3,16 @@
         "id" : 0,
         "title" : "Starbucks Coffee",
         "type" : "DeskTop",
+        "gif" : "https://user-images.githubusercontent.com/38034518/121363276-c3e53d00-c971-11eb-8223-e181250da1fd.png",
         "content" : "인터렉티브한 웹사이트를 표현할 수 있는 패럴랙스 스크롤링과 이미지 슬라이드 구현을 위한 JQuery 애니메이션을 학습하며 제작한 스타벅스 코리아 클론 데스크톱 웹사이트입니다.",
-        "skills" : ["HTML", "CSS", "Vanilla JavaScript", "jQuery"],
+        "skills" : ["HTML", "CSS", "JavaScript", "jQuery"],
         "link" : ["https://github.com/junheeleeme/Starbucks_Coffee", "https://www.juni-official.com/starbucks"]
     },
     {
         "id" : 1,
         "title" : "Desker",
         "type" : "Responsive",
+        "gif" : "https://user-imag  es.githubusercontent.com/38034518/120511825-b83fc680-c405-11eb-908c-eb95cadbfff7.png",
         "content" : "반응형 웹사이트 개발을 위한 CSS Media Query를 학습하며 제작한 데스커 공식 홈페이지 클론 웹사이트입니다. 기존에 없던 메인 슬라이드와 푸터의 반응형 작업을 추가하였습니다.",
         "skills" : ["HTML", "CSS", "jQuery", "Slick.js"],
         "link" : ["https://github.com/junheeleeme/desker_respon", "https://www.juni-official.com/desker"]
@@ -19,32 +21,36 @@
         "id" : 2,
         "title" : "Tetris",
         "type" : "DeskTop",
+        "gif" : "https://user-images.githubusercontent.com/38034518/147850125-c32aa107-7ff2-4399-96fc-d37f7edb7761.gif",
         "content" : "Vanila JavaScript를 사용해 DOM 제어를 학습하며 제작한 테트리스 데스크톱 웹사이트입니다. 테트리스 게임과 플레이 점수를 비교한 랭킹 시스템까지 제공합니다.",
-        "skills" : ["HTML", "CSS", "Vanilla JavaScript", "Express"],
+        "skills" : ["HTML", "CSS", "JavaScript", "Express"],
         "link" : ["https://github.com/junheeleeme/tetris-js", "https://www.juni-official.com/tetris"]
     },
     {
         "id" : 3,
         "title" : "Todo List(Functional Components)",
         "type" : "Responsive",
-        "content" : "CRA(Create React App) 대신 Webpack과 Babel을 이용한 리액트 개발환경에서 함수형 컴포넌트를 사용해 개발한 TodoList 반응형 웹사이트입니다. 작성된 Todo 데이터는 LocalStorage에 저장되어 브라우저가 종료되어도 지워지지 않도록 구현됐습니다.",
-        "skills" : ["HTML", "CSS", "React(Webpack/Babel)"],
+        "gif" : "https://user-images.githubusercontent.com/38034518/147850076-2a1d7dd6-5538-4ad3-a97b-4e4c8b627a74.gif",
+        "content" : "CRA(Create React App) 대신 Webpack과 Babel을 이용한 리액트 개발환경에서 함수형 컴포넌트를 사용해 개발한 TodoList 반응형 웹사이트입니다. 작성된 Todo 데이터는 LocalStorage를 활용해 브라우저가 종료되어도 지워지지 않도록 구현됐습니다.",
+        "skills" : ["HTML", "CSS", "React"],
         "link" : ["https://github.com/junheeleeme/react_TodoApp_hooks", "https://www.juni-official.com/todo-hooks"]
     },
     {
         "id" : 4,
         "title" : "Simple-React-Board",
         "type" : "Responsive",
-        "content" : "리액트, Node.JS, 몽고디비를 연동하여 구현한 텍스트 CRUD 게시판입니다. React-Router-Dom을 사용한 SPA(Single Page Application) 형태의 반응형 웹사이트입니다.",
-        "skills" : ["React(Webpack/Babel)", "CSS(Material-UI)", "Express", "MongoDB", "Axios"],
+        "gif" : "https://user-images.githubusercontent.com/38034518/147850094-2efffcc0-64a9-43f4-8ba6-603a8afd771d.gif",
+        "content" : "리액트, Node.JS, MongoDB를 연동하여 구현한 텍스트 CRUD 게시판입니다. React-Router-Dom을 사용해 SPA(Single Page Application) 형태의 반응형 웹사이트입니다. 사용자 입력 암호는 bcrypt 암호화를 통해 DB에 저장됩니다.",
+        "skills" : ["React", "CSS", "Material-UI", "Express", "MongoDB"],
         "link" : ["https://github.com/junheeleeme/Simple-React-Board", "https://www.juni-official.com/simple-react-board"]
     },
     {
         "id" : 5,
         "title" : "TinyIMG",
         "type" : "Responsive",
-        "content" : "TinyIMG는 브라우저 API 및 CANVAS를 사용한 서버리스(serverless) 이미지 압축과 리사이징, webp포멧 변환을 제공합니다. 서버로 이미지를 전송하지 않고 브라우저 성능을 기반한 이미지 변환으로 빠른 속도와 프라이버시에 안전한 장점을 가지고 있습니다.",
-        "skills" : ["React(CRA)", "Styled-Components", "HTML", "Canvas", "Firebase"],
+        "gif" : "https://user-images.githubusercontent.com/38034518/146970678-39504f8e-b4bf-4b1b-b1e7-37fdc617edd9.png",
+        "content" : "TinyIMG는 브라우저 API, CANVAS를 사용한 서버리스(serverless) 이미지 압축과 리사이징, webp포멧 변환을 제공합니다. 서버로 이미지를 전송하지 않고 브라우저 성능을 기반으로 한 이미지 압축과 프라이버시에 안전한 장점이 있습니다.",
+        "skills" : ["React", "Styled-Components", "HTML", "CSS", "Firebase"],
         "link" : ["https://github.com/junheeleeme/tinyimage", "https://tinyimg.web.app/"]
     }   
 ]
