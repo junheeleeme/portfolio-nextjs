@@ -18,7 +18,7 @@ const WrapAnimation = ({children}) => {
 
             <Header/>
                 <AnimatePresence>
-                    <motion.div key={router.route} transition={{ ease: "easeInOut", duration: 0.5 }} animate={animate.animate} exit={animate.exit} 
+                    <motion.div key={router.route} transition={{ ease: "easeInOut", duration: 0.5, delay: 0.2 }} animate={animate.animate} exit={animate.exit} 
                     style={{overflow: 'hidden'}}>
                         <Box maxW={maxWid} minH='calc(100vh - 110px)' p={{ base : '15px', xl : '50px 15px 15px 15px' }} position='relative'> 
                             {children}

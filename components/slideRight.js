@@ -4,7 +4,7 @@ const SlideRight = ({children}) => {
 
     return(
         <>
-            <motion.div transition={{ ease: "easeInOut", duration: 0.5, delay: 0.4 }} initial={slideRightAni.initial} animate={slideRightAni.animate}>
+            <motion.div transition={{ ease: "easeInOut", duration: 0.66, delay: 0.4 }} initial={slideRightAni.initial} animate={slideRightAni.animate}>
                 {children}
             </motion.div>
         </>
@@ -13,7 +13,7 @@ const SlideRight = ({children}) => {
 
 const slideRightAni = {
     initial :{ //none use
-        transform : `translateX(-40px)`,
+        transform : `translateX(-50px)`,
         opacity : 0,
     },
     animate : {

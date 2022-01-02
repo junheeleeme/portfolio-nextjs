@@ -52,14 +52,12 @@ const Header = () => {
                     </Center>
                     
                     {/* 모바일 메뉴 */}
-                    <Center display={{base: 'block', md: 'none'}}> 
+                    <Center display={{base: 'flex', md: 'none'}}> 
                         <Button onClick={toggleMenu} w='50px' h='50px' ><HiMenu/></Button>
                     </Center>
 
-                    <MobileMenu isVisible={toggle}>
-                        <Center display={{base: 'inline-block', md : 'none'}}>
-                            <TopMenu router={router} movePage={movePage} colorMode={colorMode} toggleColorMode={toggleColorMode} /> 
-                        </Center>
+                    <MobileMenu isVisible={toggle} colorMode={colorMode}>
+                        <TopMenu router={router} movePage={movePage} colorMode={colorMode} toggleColorMode={toggleColorMode} /> 
                     </MobileMenu>
 
                 </Flex>
