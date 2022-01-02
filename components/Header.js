@@ -1,32 +1,27 @@
-import { debounce } from 'lodash'
 import styled from "styled-components"
 
 import { useRouter } from "next/router"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import Link from "next/link"
 import TopMenu from './topMenu'
+import MobileMenu from './mobileMenu'
 import { Flex, Center, Spacer, Image, Box, Button, useColorMode } from "@chakra-ui/react"
-
+import { HiMenu } from 'react-icons/hi'
 
 const Header = () => {
 
     const { colorMode, toggleColorMode } = useColorMode();
-    const [mobile, setMobile] = useState();
     const [toggle, setToggle] = useState(false);
     const router = useRouter();
     const maxWid = router.pathname === '/' ? 1200 : 960;
 
-    useEffect(() => {
-        window.addEventListener('resize', handleResize);
-    }, []);
-
-    const handleResize = debounce(() => {
-        console.log('change')
-    }, 250);
-
     const toggleMenu = () => {
-        if(toggle === true) setToggle(false);
-        else setToggle(true);
+        if(toggle === true){
+            setToggle(false);
+        }else{
+            setToggle(true);
+        }
+        console.log(toggle)
     }
     const movePage = () => {
         setToggle(false);
@@ -50,15 +45,22 @@ const Header = () => {
                         </Link>
                     </Center>
                     <Spacer/>
-                    <Button display={{base: 'block', md :'none'}} onClick={toggleMenu}>❖</Button>
                     
-                        {/* PC 메뉴 */}
+                    {/* PC 메뉴 */}
                     <Center display={{base: 'none', md: 'flex'}} position='relative'>
                         <TopMenu router={router} movePage={movePage} colorMode={colorMode} toggleColorMode={toggleColorMode} />
                     </Center>
+                    
+                    {/* 모바일 메뉴 */}
+                    <Center> 
+                        <Button onClick={toggleMenu} w='50px' h='50px' ><HiMenu/></Button>
+                    </Center>
 
-                        {/* 모바일 메뉴 */}
-                        {/* <TopMenu router={router} movePage={movePage} colorMode={colorMode} toggleColorMode={toggleColorMode} /> */}
+                    <MobileMenu isVisible={toggle}>
+                        <Center display={{base: 'inline-block', md : 'none'}}>
+                            <TopMenu router={router} movePage={movePage} colorMode={colorMode} toggleColorMode={toggleColorMode} /> 
+                        </Center>
+                    </MobileMenu>
 
                 </Flex>
             </HeaderWrap>

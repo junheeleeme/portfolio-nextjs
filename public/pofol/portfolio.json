@@ -12,7 +12,7 @@
         "id" : 1,
         "title" : "Desker",
         "type" : "Responsive",
-        "gif" : "https://user-imag  es.githubusercontent.com/38034518/120511825-b83fc680-c405-11eb-908c-eb95cadbfff7.png",
+        "gif" : "https://user-images.githubusercontent.com/38034518/120511825-b83fc680-c405-11eb-908c-eb95cadbfff7.png",
         "content" : "반응형 웹사이트 개발을 위한 CSS Media Query를 학습하며 제작한 데스커 공식 홈페이지 클론 웹사이트입니다. 기존에 없던 메인 슬라이드와 푸터의 반응형 작업을 추가하였습니다.",
         "skills" : ["HTML", "CSS", "jQuery", "Slick.js"],
         "link" : ["https://github.com/junheeleeme/desker_respon", "https://www.juni-official.com/desker"]

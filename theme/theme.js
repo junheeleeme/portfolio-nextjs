@@ -9,6 +9,8 @@ export const theme = extendTheme({
     colors: {
         dark_toggleBg : '#845EC2',
         light_toggleBg : '#F9F871',
+        dark_BtnBg: '#171923',
+        light_BtnBg: '#cfcfcf',
     },
     breakpoints,
 });

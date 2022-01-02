@@ -5,8 +5,8 @@ const SlideAnimation = ({children}) => {
 
     return(
         <>  
-            <motion.div transition={{ ease: "easeInOut", duration: 0.5, delay: 0.66 }} initial={slideUp.initial} animate={slideUp.animate}>
-                <Box overflow='hidden'>{children}</Box>
+            <motion.div transition={{ ease: "easeInOut", duration: 0.5, delay: 0.66 }} initial={slideUp.initial} animate={slideUp.animate}  >
+                <Box position='relative'>{children}</Box>
             </motion.div>
         </>
     )

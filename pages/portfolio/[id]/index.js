@@ -1,50 +1,55 @@
-import axios from "axios";
-import SlideAnimation from "../../../components/slideAnimation";
-import SlideRight from "../../../components/slideRight";
-import Link from "next/link";
-import { Box, Heading, Image, Flex, Button } from "@chakra-ui/react";
-
-
+import axios from "axios"
+import SlideAnimation from "../../../components/slideAnimation"
+import SlideRight from "../../../components/slideRight"
+import Link from "next/link"
+import { Box, Heading, Image, Flex, Button, Link as Atag } from "@chakra-ui/react"
+import { useColorMode } from "@chakra-ui/react"
 
 const Index = ({data}) => {
-    
-    const btnBg = "linear-gradient(to right, #eb9ac8, #df95d2, #ce92dc, #b791e7, #9991f0, #789ffb, #4fabff, #00b6ff, #00cbfa, #00dce9, #57ebd3, #99f6be)"
+
+    const {colorMode} = useColorMode();
+
 
     return(
         <>
-            <Box maxW='760px'>
+            <Box maxW='760px' p={{base: '0', lg: '40px 0'}}>
                 <SlideRight>
                     <Heading as='h2' display='block' position='relative' size='lg' pb='30px' textOverflow='ellipsis' overflow='hidden' 
                         whiteSpace='nowrap' borderBottomColor='colors.end'>
                         {data.title} - {data.type}
+                        <Box position='absolute' top='43px' left='30px' w='100%' h='1px' bg={colorMode==='light'? '#000':'#fff'}/>
                     </Heading>
                 </SlideRight>
 
                 <SlideAnimation>
                     <Box>
                         <Box display='block' w='100%'>
-                            <Image src={data.gif} alt={data.title} maxW='100%' h='auto' m='20px auto'/>
+                            <Image src={data.gif} alt={data.title} w='100%' h='auto' m='20px auto'/>
                         </Box>
-                        <Box fontSize='1.1em' p='20px 3px'>
+                        <Box fontSize='1.1em' p='20px 3px 40px 3px'>
                             {data.content}
                         </Box>
                     </Box>
-                    <Heading as='h3' size='md'>🧑🏻‍💻 Skills</Heading>
-                    <Flex flexWrap='wrap' p='10px 0'>
+                    <Heading as='h3' size='md'>🧑🏻‍💻 Skill</Heading>
+                    <Flex flexWrap='wrap' p='10px 0 30px 0'>
                         {
-                            data.skills.map(s => <Button bg="#2b4a7b" size="sm" fontSize='1em' color='#fff' m='0.25em'>
+                            data.skills.map((s, idx) => <Button key={s+idx} bg="blue.300" size="sm" fontSize='1em' color='#fff' m='0.25em' _hover='none'>
                                 {s}
                             </Button>)
                         }
                     </Flex>
-                    <Flex flexWrap='wrap'>
-                        {data.link.map( (l, idx) => 
-                            
-                            <Link href={l} passHref>
-                                {idx === 0 ? 'GitHub' : 'Visit'}
-                            </Link> 
-                            
-                        )}
+                    <Heading as='h3' size='md'>🔗 Link</Heading>
+                    <Flex flexWrap='nowrap' p='10px 0'>
+                        <Link href={data.link[1]} passHref>
+                            <Atag target="_blank" w='100%' m='0 3px' _hover='none'>
+                                <Button size='md' w='100%' bg='blue.500' color="#fff" _hover='none'>GitHub</Button>                            
+                            </Atag>
+                        </Link>
+                        <Link href={data.link[1]} passHref>
+                            <Atag target="_blank" w='100%' m='0 3px' _hover='none'>
+                                <Button size='md' w='100%' bg='blue.500' color="#fff" _hover='none'>View</Button>
+                            </Atag>
+                        </Link>
                     </Flex>
                 </SlideAnimation>
             </Box>

@@ -79,7 +79,7 @@ const skill = () => {
                             <ListIcon as={CheckCircleIcon} color='green.500' />웹표준, 웹 접근성 및 SEO를 고려한 시멘틱 마크업 작업이 가능합니다.
                         </ListItem>
                         <ListItem>
-                            <ListIcon as={CheckCircleIcon} color='green.500' />HTML과 CSS로 주어진 디자인 레이아웃에 따라 웹을 디자인할 수 있습니다.
+                            <ListIcon as={CheckCircleIcon} color='green.500' />HTML/CSS로 주어진 디자인 레이아웃에 따라 웹을 디자인할 수 있습니다.
                         </ListItem>
                         <ListItem>
                             <ListIcon as={CheckCircleIcon} color='green.500' />CSS Media Query를 사용하여 반응형 웹을 만들 수 있습니다.
