@@ -54,7 +54,8 @@ const BoxWrap = styled(Center)`
     position: absolute; top: 80px; left: 50%; transform: translate(-50%, 0); width: 100%; padding: 20px 0;
     @media screen and (max-width: 1440px){ top: 0px; }
     @media screen and (max-width: 1280px){ top: 30px; }
-
+    & .swiper-pagination-bullet{ background: ${props=>props.mode==='light'?'#000':'#fff'} }
+    
     .swiper{ 
         width: 100vw; height: 450px; padding: 0; overflow: initial !important;
         @media screen and (max-width: 768px){ height: 350px; padding: 40px 0;  }
@@ -70,7 +71,6 @@ const BoxWrap = styled(Center)`
         &.swiper-slide-active{ box-shadow: ${props=> props.mode==='light'?'rgba(0, 0, 0, 0.2) 0px 2px 4px 0px, rgba(0, 0, 0, 0.5) 0px 2px 16px 0px':'rgba(255, 255, 255, 0.12) 0px 2px 4px 0px, rgba(255, 255, 255, 0.32) 0px 2px 16px 0px'}; }
         &>a{ display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; }
         &.swiper-slide-active>a{ display: block; }
-    
     }
     @media screen and (max-width: 768px){
         .swiper-slide{ max-width: 400px; height: 240px; }

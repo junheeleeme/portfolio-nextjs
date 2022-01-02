@@ -52,7 +52,7 @@ const Header = () => {
                     </Center>
                     
                     {/* 모바일 메뉴 */}
-                    <Center> 
+                    <Center display={{base: 'block', md: 'none'}}> 
                         <Button onClick={toggleMenu} w='50px' h='50px' ><HiMenu/></Button>
                     </Center>
 
