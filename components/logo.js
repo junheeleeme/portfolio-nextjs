@@ -1,15 +1,15 @@
-import { Box, Image } from "@chakra-ui/react"
+import { Image } from "@chakra-ui/react"
 import Link from "next/link"
 import { Link as LinkStyled } from "@chakra-ui/react"
 
 
-const Logo = ({colorMode, closeMenu}) => {
+const Logo = ({colorMode}) => {
 
     return(
         <>
         <Link href="/" passHref>
             <LinkStyled position='absolute' top='50%' left='50%' transform='translate(-50%, -50%)' zIndex='9999'
-            w='100%' h='auto' _active={false} _focus={false} onClick={closeMenu}> 
+            w='100%' h='auto' p='5px' _active={false} _focus={false}> 
             {
                 colorMode === 'light' ? 
                 <Image src='/logo_white.png' w='100%' h='100%' alt="Logo"/>

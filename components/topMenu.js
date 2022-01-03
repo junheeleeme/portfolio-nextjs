@@ -1,7 +1,5 @@
-import styled from "styled-components"
 import Link from "next/link"
-import { Button, MenuItem, Link as LinkStyled } from "@chakra-ui/react"
-
+import { MenuItem, Link as LinkStyled } from "@chakra-ui/react"
 
 const TopMenu = ({type, router}) => {
 
@@ -23,9 +21,9 @@ const TopMenu = ({type, router}) => {
                 )
                     :
                 menu.map((m, idx) =>
-                <MenuItem key={m[0]+idx} p='0'>
+                <MenuItem key={m[0]+idx} p='0' bg='none' _focus={false} className={router.pathname === m[1] ? 'focus' : ''}>
                     <Link href={m[1]} passHref>
-                        <LinkStyled className={router.pathname === m[1] ? 'focus' : ''}>
+                        <LinkStyled w='100%' fontSize='1.25em' p='10px 0' m='0' textAlign='center' _hover={false} _active={false} _focus={false}>
                             {m[0]}
                         </LinkStyled>
                     </Link>
@@ -34,13 +32,5 @@ const TopMenu = ({type, router}) => {
             }
         </>
     )}
-
-// const LinkStyled = styled.a`
-//     font-size: 1.2em; padding: 0 20px;
-//     @media screen and (max-width: 768px){
-//         display: block; width: 100%; 
-//         text-align: center;
-//         padding: 10px 0; margin-top: 0 !important;
-// }`
 
 export default TopMenu
