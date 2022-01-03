@@ -1,6 +1,6 @@
 import Typewriter from 'typewriter-effect';
 import styled from 'styled-components';
-import SlideAnimation from '../components/slideAnimation';
+import SlideAnimation from '../motion/slideAnimation';
 
 const index = ()=> {
   return (

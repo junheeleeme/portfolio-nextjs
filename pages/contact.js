@@ -1,5 +1,5 @@
-import SlideRight from "../components/slideRight"
-import SlideAnimation from "../components/slideAnimation"
+import SlideRight from "../motion/slideRight"
+import SlideAnimation from "../motion/slideAnimation"
 import SubTitle from "../components/subtitle"
 import { useToast as UseToast } from '@chakra-ui/react'
 import { useRef as UseRef } from "react"

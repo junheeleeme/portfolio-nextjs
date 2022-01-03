@@ -1,6 +1,6 @@
 import styled from "styled-components"
-import SlideRight from "../components/slideRight"
-import SlideAnimation from "../components/slideAnimation"
+import SlideRight from "../motion/slideRight"
+import SlideAnimation from "../motion/slideAnimation"
 import SubTitle from "../components/subtitle"
 import { List, ListItem, ListIcon, Center, Heading, Tooltip } from "@chakra-ui/react"
 import { CheckCircleIcon } from "@chakra-ui/icons"

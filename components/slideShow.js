@@ -65,8 +65,10 @@ const BoxWrap = styled(Center)`
         position: relative; border-radius: 10px;
         max-width: 660px; height: 400px; overflow: hidden; 
         box-shadow: ${props=> props.mode==='light'? 
-        'rgba(0, 0, 0, 0.4) 0px 1px 2px 0px, rgba(0, 0, 0, 0.2) 0px 2px 6px 2px;' :
-        'rgba(200, 200, 200, 0.1) 0px 1px 2px 0px, rgba(200, 200, 200, 0.05) 0px 2px 6px 2px;'
+        '0 3px 15px rgb(0 0 0 / 30%)' :
+        '0 3px 15px rgb(0 0 0 / 30%)'
+        // 'rgba(0, 0, 0, 0.4) 0px 1px 2px 0px, rgba(0, 0, 0, 0.2) 0px 2px 6px 2px;' :
+        // 'rgba(200, 200, 200, 0.1) 0px 1px 2px 0px, rgba(200, 200, 200, 0.05) 0px 2px 6px 2px;'
         };
         &.swiper-slide-active{ box-shadow: ${props=> props.mode==='light'?'rgba(0, 0, 0, 0.2) 0px 2px 4px 0px, rgba(0, 0, 0, 0.5) 0px 2px 16px 0px':'rgba(255, 255, 255, 0.12) 0px 2px 4px 0px, rgba(255, 255, 255, 0.32) 0px 2px 16px 0px'}; }
         &>a{ display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; }

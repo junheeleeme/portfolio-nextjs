@@ -5,7 +5,7 @@ const ColorToggle = ({colorMode, toggleColorMode}) =>{
 
     return(
         <>
-            <Button w='40px' h='40px' borderRadius='50%' m='auto' _focus={false} _hover={false} _active={false}
+            <Button w='40px' h='40px' m='auto' _focus={false} _hover={false} _active={false}
                 onClick={toggleColorMode} bg={colorMode !== 'light' ? 'light_toggleBg' : 'dark_toggleBg'}>
                 {colorMode !== 'light' ? <SunIcon color="gray.900"/> : <MoonIcon color="gray.50"/>}
             </Button>

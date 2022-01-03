@@ -1,7 +1,7 @@
-import styled from "styled-components"
 import { useState, useEffect } from "react"
+import { Box, Center, Text } from "@chakra-ui/react";
 
-export default function Footer(){
+const Footer = ({colorMode}) => {
 
     const [_date, setDate] = useState();
     useEffect(()=>{
@@ -10,23 +10,14 @@ export default function Footer(){
 
     return(
         <>
-            <footer>
-                <FooterWrap>
-                    <p>{_date}. juni-official All rights reserved</p>
-                </FooterWrap>
-            </footer>
+            <Box as='footer'>
+                <Center h='30px'>
+                    <Text fontSize='sm' color={colorMode==='light'?'gray.500':'gray.400'}>{_date}. juni-official All rights reserved</Text>
+                </Center>
+            </Box>
         </>
     )
 
 }
 
-const FooterWrap = styled.section`
-    max-width: 1080px;
-    height: 30px;
-    text-align: center;
-    &>p{
-        line-height: 30px;
-        font-size: 14px;
-        color: #747474;
-    }
-`
+export default Footer

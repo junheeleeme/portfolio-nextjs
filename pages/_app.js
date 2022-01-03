@@ -5,7 +5,7 @@ import "swiper/css/effect-coverflow"
 import "swiper/css/pagination"
 import 'swiper/css/mousewheel'
 
-import WrapAnimation from '../components/WrapAnimation'
+import WrapAnimation from '../motion/wrapAnimation'
 import { ChakraProvider } from '@chakra-ui/react'
 import { theme } from '../theme/theme'
 

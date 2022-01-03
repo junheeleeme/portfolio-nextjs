@@ -1,49 +1,46 @@
 import styled from "styled-components"
 import Link from "next/link"
-import { Box, Button, Icon } from "@chakra-ui/react"
-import { CloseIcon } from "@chakra-ui/icons"
+import { Button, MenuItem, Link as LinkStyled } from "@chakra-ui/react"
 
-const TopMenu = ({router, toggleMenu, colorMode}) => {
+
+const TopMenu = ({type, router}) => {
+
+    //Menu List
+    const menu = [['Home', '/'], ['Skill', '/skill'], ['Portfolio', '/portfolio'], ['Contact', '/contact']]
+
 
     return(
         <>
-            <Box display={{base: 'block', md: 'none'}} position='relative' padding='0 15px' h='70px' m='0'>
-                <Button position='absolute' top='50%' right='15px' transform='translate(0, -50%)' w='40px' h='40px' onClick={toggleMenu}
-                borderRadius='50%' border="1px solid #000" bg={colorMode==='light'? 'gray.200':'black'} _hover={false} _focus={false} _active={false}>
-                    <Icon as={CloseIcon}/>
-                </Button>    
-            </Box>
-            
+            {
+                type === 'desktop' ?
 
-            <Link href='/' passHref >
-                <LinkStyled className={router.pathname === '/' ? 'focus' : ''} onClick={toggleMenu}>
-                    Home
-                </LinkStyled>
-            </Link>
-            <Link href='/skill' passHref>
-                <LinkStyled className={router.pathname === '/skill' ? 'focus' : ''} onClick={toggleMenu}>
-                    Skill
-                </LinkStyled>
-            </Link>
-            <Link href='/portfolio' passHref>
-                <LinkStyled className={router.pathname === '/portfolio' ? 'focus' : ''} onClick={toggleMenu}>
-                    Portfolio
-                </LinkStyled>
-            </Link>
-            <Link href='/contact' passHref>
-                <LinkStyled className={router.pathname === '/contact' ? 'focus' : ''} onClick={toggleMenu}>
-                    Contact
-                </LinkStyled>
-            </Link>
+                menu.map((m, idx) =>
+                <Link href={m[1]} passHref key={m[0]+idx}>
+                    <LinkStyled as='li' fontSize='1.2em' p='0.2em 1.2em' _hover={false} className={router.pathname === m[1] ? 'focus' : ''}>
+                        {m[0]}
+                    </LinkStyled>
+                </Link>
+                )
+                    :
+                menu.map((m, idx) =>
+                <MenuItem key={m[0]+idx} p='0'>
+                    <Link href={m[1]} passHref>
+                        <LinkStyled className={router.pathname === m[1] ? 'focus' : ''}>
+                            {m[0]}
+                        </LinkStyled>
+                    </Link>
+                </MenuItem>
+                )
+            }
         </>
     )}
 
-const LinkStyled = styled.a`
-    font-size: 1.2em; padding: 0 20px;
-    @media screen and (max-width: 768px){
-        display: block; width: 100%; 
-        text-align: center;
-        padding: 15px 0; margin-top: 0 !important;
-}`
+// const LinkStyled = styled.a`
+//     font-size: 1.2em; padding: 0 20px;
+//     @media screen and (max-width: 768px){
+//         display: block; width: 100%; 
+//         text-align: center;
+//         padding: 10px 0; margin-top: 0 !important;
+// }`
 
 export default TopMenu

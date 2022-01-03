@@ -1,6 +1,6 @@
 import axios from "axios"
-import SlideAnimation from "../../../components/slideAnimation"
-import SlideRight from "../../../components/slideRight"
+import SlideAnimation from "../../../motion/slideAnimation"
+import SlideRight from "../../../motion/slideRight"
 import Link from "next/link"
 import { Box, Heading, Image, Flex, Button, Link as Atag } from "@chakra-ui/react"
 import { useColorMode } from "@chakra-ui/react"
@@ -12,7 +12,7 @@ const Index = ({data}) => {
 
     return(
         <>
-            <Box maxW='760px' p={{base: '0', lg: '40px 0'}}>
+            <Box as='section' maxW='760px' p={{base: '0', lg: '40px 0'}}>
                 <SlideRight>
                     <Heading as='h2' display='block' position='relative' size='lg' pb='30px' textOverflow='ellipsis' overflow='hidden' 
                         whiteSpace='nowrap' borderBottomColor='colors.end'>
@@ -33,7 +33,7 @@ const Index = ({data}) => {
                     <Heading as='h3' size='md'>🧑🏻‍💻 Skill</Heading>
                     <Flex flexWrap='wrap' p='10px 0 30px 0'>
                         {
-                            data.skills.map((s, idx) => <Button key={s+idx} bg="blue.300" size="sm" fontSize='1em' color='#fff' m='0.25em'>
+                            data.skills.map((s, idx) => <Button key={s+idx} bg="blue.700" size="sm" fontSize='1em' color='#fff' m='0.25em'>
                                 {s}
                             </Button>)
                         }
@@ -41,13 +41,13 @@ const Index = ({data}) => {
                     <Heading as='h3' size='md'>🔗 Link</Heading>
                     <Flex flexWrap='nowrap' p='10px 0'>
                         <Link href={data.link[1]} passHref>
-                            <Atag target="_blank" w='100%' m='0 3px' _hover={false} _active={false} _focus={false}>
-                                <Button size='md' w='100%' bg='blue.500' color="#fff">GitHub</Button>                            
+                            <Atag target="_blank" w='100%' m='0 3px' _hover={false}>
+                                <Button size='md' w='100%' bg='blue.500' color="#fff" _hover={false}>GitHub</Button>                            
                             </Atag>
                         </Link>
                         <Link href={data.link[1]} passHref>
-                            <Atag target="_blank" w='100%' m='0 3px' _hover={false} _active={false} _focus={false}>
-                                <Button size='md' w='100%' bg='blue.500' color="#fff">View</Button>
+                            <Atag target="_blank" w='100%' m='0 3px' _hover={false}>
+                                <Button size='md' w='100%' bg='blue.500' color="#fff" _hover={false}>View</Button>
                             </Atag>
                         </Link>
                     </Flex>

@@ -1,5 +1,5 @@
-import Header from "./Header"
-import Footer from "./footer"
+import Header from "../components/header"
+import Footer from "../components/footer"
 import { useRouter } from "next/router"
 import { Box } from '@chakra-ui/react'
 import { motion } from "framer-motion"
@@ -18,14 +18,14 @@ const WrapAnimation = ({children}) => {
 
             <Header/>
                 <AnimatePresence>
-                    <motion.div key={router.route} transition={{ ease: "easeInOut", duration: 0.5, delay: 0.2 }} animate={animate.animate} exit={animate.exit} 
+                    <motion.main key={router.route} transition={{ ease: "easeInOut", duration: 0.5 }} animate={animate.animate} exit={animate.exit} 
                     style={{overflow: 'hidden'}}>
-                        <Box maxW={maxWid} minH='calc(100vh - 110px)' p={{ base : '15px', xl : '50px 15px 15px 15px' }} position='relative'> 
+                        <Box as='section' maxW={maxWid} minH='calc(100vh - 100px)' p={{ base : '15px', xl : '50px 15px 15px 15px' }} position='relative'> 
                             {children}
                         </Box>
-                    </motion.div>
+                    </motion.main>
                 </AnimatePresence>
-            <Footer/>
+            <Footer colorMode={colorMode}/>
 
             </Box>
         </>

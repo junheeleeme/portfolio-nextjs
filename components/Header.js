@@ -5,10 +5,8 @@ import { useState } from "react"
 import Logo from "./logo"
 import TopMenu from './topMenu'
 import ColorToggle from "./colorToggle"
-import MobileMenu from "./mobileMenu"
-import { useColorMode, Flex, Center, Spacer, Button, Icon } from "@chakra-ui/react"
+import { useColorMode, Flex, Box, Center, Spacer, IconButton, Menu, MenuButton, MenuList } from "@chakra-ui/react"
 import { HamburgerIcon } from "@chakra-ui/icons"
-
 
 const Header = () => {
 
@@ -36,27 +34,28 @@ const Header = () => {
                     <Spacer/>
                     
                     {/* DeskTop Menu */}
-                    <Center display={{base: 'none', md: 'flex'}} position='relative'>
-                        <TopMenu router={router}/>
+                    <Center as='nav'>
+                        <Center as='ul' display={{base: 'none', md: 'flex'}} position='relative' listStyleType='none'>
+                            <TopMenu type={'desktop'} router={router}/>
+                        </Center>
                     </Center>
 
                     {/* Color Toggle */}
-                    <Center>
+                    <Center ml='1em'>
                         <ColorToggle colorMode={colorMode} toggleColorMode={toggleColorMode}/>
                     </Center>
 
                     {/* Mobile Menu Toggle */}
-                    <Center display={{base: 'flex', md: 'none'}} ml='10px'>
-                        <Button onClick={toggleMenu} w='40px' h='40px' _hover={false} _focus={false} _active={false}
-                        bg={colorMode==='light'? 'gray.200':'black'}>
-                            <Icon as={HamburgerIcon} w='1.5em' h='1.5em'/>
-                        </Button>
+                    <Center display={{base: 'flex', md: 'none'}} ml='10px' width='40px'>
+                        <Menu isLazy id={`mobile-menu-id`}>
+                            <MenuButton as={IconButton} icon={<HamburgerIcon/>} w='40px' h='40px' p='0' m='auto' _focus={false} id='menu' islazy={'true'}
+                            borderWidth='1px'  borderColor={colorMode==='light'? 'blackAlpha.300':'whiteAlpha.300'} bg='none'/>
+                        
+                            <MenuList boxShadow='md' p='0'>
+                                <TopMenu type={'mobile'} router={router}/>
+                            </MenuList>
+                        </Menu>
                     </Center>
-
-                    {/* Mobile Menu */}
-                    <MobileMenu isVisible={toggle} colorMode={colorMode} >
-                        <TopMenu router={router} toggleMenu={toggleMenu} colorMode={colorMode}/>
-                    </MobileMenu>
 
 
                 </Flex>
