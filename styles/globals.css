@@ -9,6 +9,9 @@ html,body {
 }
 a { color: inherit; text-decoration: none; }
 * { box-sizing: border-box; margin: 0 auto; }
-.focus{ font-weight: bold; background-color: rgba(0,0,0,0.12) !important; }
+.focus{ font-weight: bold; }
+@media screen and (max-width: 768px) {
+  .focus{ background-color: rgba(0,0,0,0.08) !important; }
+}
 .svgWrap{ position: relative; width: 80px; height: 80px; display: inline-block; margin: 10px 5px; }
 .svgWrap>svg{ width: 80px; height: 80px; }
