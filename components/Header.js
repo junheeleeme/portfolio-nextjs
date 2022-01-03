@@ -1,12 +1,13 @@
 import styled from "styled-components"
-
 import { useRouter } from "next/router"
 import { useState } from "react"
-import Link from "next/link"
+
+import Logo from "./logo"
 import TopMenu from './topMenu'
-import MobileMenu from './mobileMenu'
-import { Flex, Center, Spacer, Image, Box, Button, useColorMode } from "@chakra-ui/react"
-import { HiMenu } from 'react-icons/hi'
+import ColorToggle from "./colorToggle"
+import MobileMenu from "./mobileMenu"
+import { useColorMode, Flex, Center, Spacer, Button } from "@chakra-ui/react"
+
 
 const Header = () => {
 
@@ -16,14 +17,10 @@ const Header = () => {
     const maxWid = router.pathname === '/' ? 1200 : 960;
 
     const toggleMenu = () => {
-        if(toggle === true){
-            setToggle(false);
-        }else{
-            setToggle(true);
-        }
-        console.log(toggle)
+        if(toggle === true){ setToggle(false); }
+        else{ setToggle(true); }
     }
-    const movePage = () => {
+    const closeMenu = () => {
         setToggle(false);
     }
 
@@ -32,33 +29,33 @@ const Header = () => {
         <HeaderStyle>
             <HeaderWrap mw={maxWid}>
                 <Flex h='100%'>
-                    <Center w="60px" h='100%'>
-                        <Link href="/" passHref>
-                            <Box>
-                            {
-                                colorMode === 'light' ? 
-                                <Image src='/logo_white.png' w='100%' h='100%' alt="Logo"/>
-                                    :
-                                <Image src='/logo_dark.png' w='100%' h='100%' alt="Logo"/>
-                            }
-                            </Box>
-                        </Link>
+                    <Center position='relative' w="60px" h='100%'>
+                        <Logo colorMode={colorMode} closeMenu={closeMenu}/>
                     </Center>
                     <Spacer/>
                     
-                    {/* PC 메뉴 */}
+                    {/* DeskTop Menu */}
                     <Center display={{base: 'none', md: 'flex'}} position='relative'>
-                        <TopMenu router={router} movePage={movePage} colorMode={colorMode} toggleColorMode={toggleColorMode} />
-                    </Center>
-                    
-                    {/* 모바일 메뉴 */}
-                    <Center display={{base: 'flex', md: 'none'}}> 
-                        <Button onClick={toggleMenu} w='50px' h='50px' ><HiMenu/></Button>
+                        <TopMenu router={router}/>
                     </Center>
 
-                    <MobileMenu isVisible={toggle} colorMode={colorMode}>
-                        <TopMenu router={router} movePage={movePage} colorMode={colorMode} toggleColorMode={toggleColorMode} /> 
+                    {/* Color Toggle */}
+                    <Center>
+                        <ColorToggle colorMode={colorMode} toggleColorMode={toggleColorMode}/>
+                    </Center>
+
+                    {/* Mobile Menu Toggle */}
+                    <Center display={{base: 'flex', md: 'none'}} ml='10px'>
+                        <Button onClick={toggleMenu} w='40px' h='40px' _hover={false} _focus={false} _active={false}
+                        bg={colorMode==='light'? 'gray.200':'black'}>M
+                        </Button>
+                    </Center>
+
+                    {/* Mobile Menu */}
+                    <MobileMenu isVisible={toggle} colorMode={colorMode} >
+                        <TopMenu router={router} toggleMenu={toggleMenu} colorMode={colorMode}/>
                     </MobileMenu>
+
 
                 </Flex>
             </HeaderWrap>
@@ -71,8 +68,9 @@ const HeaderStyle = styled.header`
     & .focus { font-weight: bold; }
 `
 const HeaderWrap = styled.div`
-    height: 70px; padding: 0 20px; transition: max-width 1s ease; max-width: ${props=>props.mw}px;
+    height: 70px; padding: 0 15px; transition: max-width 1s ease; max-width: ${props=>props.mw}px;
 `
+
 
 export default Header
 
