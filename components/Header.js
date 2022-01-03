@@ -6,7 +6,8 @@ import Logo from "./logo"
 import TopMenu from './topMenu'
 import ColorToggle from "./colorToggle"
 import MobileMenu from "./mobileMenu"
-import { useColorMode, Flex, Center, Spacer, Button } from "@chakra-ui/react"
+import { useColorMode, Flex, Center, Spacer, Button, Icon } from "@chakra-ui/react"
+import { HamburgerIcon } from "@chakra-ui/icons"
 
 
 const Header = () => {
@@ -47,7 +48,8 @@ const Header = () => {
                     {/* Mobile Menu Toggle */}
                     <Center display={{base: 'flex', md: 'none'}} ml='10px'>
                         <Button onClick={toggleMenu} w='40px' h='40px' _hover={false} _focus={false} _active={false}
-                        bg={colorMode==='light'? 'gray.200':'black'}>M
+                        bg={colorMode==='light'? 'gray.200':'black'}>
+                            <Icon as={HamburgerIcon} w='1.5em' h='1.5em'/>
                         </Button>
                     </Center>
 
