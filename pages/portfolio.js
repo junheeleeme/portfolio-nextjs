@@ -1,3 +1,4 @@
+import HeadInfo from "../components/headInfo"
 import axios from "axios"
 import SlideRight from "../motion/slideRight"
 import SlideAnimation from "../motion/slideAnimation"
@@ -8,6 +9,7 @@ const portfolio = ({data}) => {
 
     return(
         <>
+            <HeadInfo title="Portfolio" />
             <SlideRight>
                 <SubTitle txt='Portfolio'/>
             </SlideRight>

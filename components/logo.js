@@ -2,7 +2,6 @@ import { Image } from "@chakra-ui/react"
 import Link from "next/link"
 import { Link as LinkStyled } from "@chakra-ui/react"
 
-
 const Logo = ({colorMode}) => {
 
     return(

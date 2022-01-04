@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-
+import HeadInfo from '../components/headInfo';
 import "swiper/css"
 import "swiper/css/effect-coverflow"
 import "swiper/css/pagination"
@@ -14,6 +14,7 @@ const MyApp = ({ Component, pageProps }) => {
 
   return (
     <>
+      <HeadInfo />
       <ChakraProvider theme={theme}>
         <WrapAnimation>
           <Component {...pageProps}/>

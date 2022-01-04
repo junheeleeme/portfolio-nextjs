@@ -9,7 +9,6 @@ const Index = ({data}) => {
 
     const {colorMode} = useColorMode();
 
-
     return(
         <>
             <Box as='section' maxW='760px' p={{base: '0', lg: '40px 0'}}>

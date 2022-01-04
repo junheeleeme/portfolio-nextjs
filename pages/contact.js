@@ -1,3 +1,4 @@
+import HeadInfo from "../components/headInfo"
 import SlideRight from "../motion/slideRight"
 import SlideAnimation from "../motion/slideAnimation"
 import SubTitle from "../components/subtitle"
@@ -28,6 +29,7 @@ const contact = () => {
 
     return(
         <>
+            <HeadInfo title='Contact' />
             <SlideRight>
                 <SubTitle txt='Contact' />
             </SlideRight>
