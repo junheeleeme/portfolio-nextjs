@@ -1,8 +1,8 @@
-import HeadInfo from "../components/headInfo"
-import SlideRight from "../motion/slideRight"
-import SlideAnimation from "../motion/slideAnimation"
-import SubTitle from "../components/subtitle"
-import SkillStack from "../components/skillStack"
+import HeadInfo from "../components/headInfo.js"
+import SlideRight from "../motion/slideRight.js"
+import SlideAnimation from "../motion/slideAnimation.js"
+import SubTitle from "../components/subtitle.js"
+import SkillStack from "../components/skillStack.js"
 import { List, ListItem, ListIcon, Center, Box } from "@chakra-ui/react"
 import { CheckCircleIcon } from "@chakra-ui/icons"
 

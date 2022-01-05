@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic'
-import SlideAnimation from '../motion/slideAnimation'
+import SlideAnimation from '../motion/slideAnimation.js'
 
 const NoSsr_IndexThree = dynamic(()=> import('../components/IndexThree'), { ssr : false});
 

@@ -1,8 +1,8 @@
 import { useRouter } from "next/router"
 
-import Logo from "./logo"
-import TopMenu from './topMenu'
-import ColorToggle from "./colorToggle"
+import Logo from "./logo.js"
+import TopMenu from './topMenu.js'
+import ColorToggle from "./colorToggle.js"
 import { useColorMode, Flex, Box, Center, Spacer, IconButton, Menu, MenuButton, MenuList } from "@chakra-ui/react"
 import { HamburgerIcon } from "@chakra-ui/icons"
 

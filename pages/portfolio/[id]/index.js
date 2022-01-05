@@ -1,4 +1,3 @@
-import { GetStaticPaths } from "next"
 import axios from "axios"
 import SlideAnimation from "../../../motion/slideAnimation"
 import SlideRight from "../../../motion/slideRight"

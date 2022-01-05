@@ -1,8 +1,8 @@
-import HeadInfo from "../components/headInfo"
+import HeadInfo from "../components/headInfo.js"
 import axios from "axios"
-import SlideRight from "../motion/slideRight"
-import SlideAnimation from "../motion/slideAnimation"
-import SubTitle from '../components/subtitle'
+import SlideRight from "../motion/slideRight.js"
+import SlideAnimation from "../motion/slideAnimation.js"
+import SubTitle from '../components/subtitle.js'
 import dynamic from "next/dynamic"
 
 const NoSsr_SlideShow = dynamic(()=> import('../components/slideShow'), { ssr : false }); 

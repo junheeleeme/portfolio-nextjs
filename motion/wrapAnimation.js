@@ -1,5 +1,5 @@
-import Header from "../components/header"
-import Footer from "../components/footer"
+import Header from "../components/header.js"
+import Footer from "../components/footer.js"
 import { useRouter } from "next/router"
 import { Box } from '@chakra-ui/react'
 import { motion } from "framer-motion"
