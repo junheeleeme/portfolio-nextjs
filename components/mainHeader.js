@@ -15,7 +15,7 @@ const MainHeader = () => {
 
     return(
         <>
-        <Box as='header' position='fixed' top='0' left='0' w='100%' h='70px' bg='rgba(255, 255, 255, 0.25)' zIndex='9999'>
+        <Box as='header' h={{ base: '60px', md : '70px'}} >
             <Box maxW={maxWid+'px'} p='0 15px' h='100%' transition='max-width 0.8s ease'>
                 <Flex h='100%'>
                     <Center position='relative' w="70px" h='100%' p='0 5px'>

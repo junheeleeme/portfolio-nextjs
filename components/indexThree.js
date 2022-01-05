@@ -97,10 +97,9 @@ const IndexThree = () => {
 
     return(
         <>             
-            <Center ref={target}>
+            <Center ref={target}></Center>
                 
-            </Center>
-            <button>123</button>
+            
         </>
     )
 }

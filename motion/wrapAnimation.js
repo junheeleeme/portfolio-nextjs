@@ -15,7 +15,7 @@ const WrapAnimation = ({children}) => {
 
     return(
         <>
-            <Box w='100vw' minH='100vh' pt='70px' bg={ colorMode === 'light' ? 'gray.100' : 'gray.700'}> 
+            <Box w='100vw' minH='100vh' bg={ colorMode === 'light' ? 'gray.100' : 'gray.700'}> 
 
             <MainHeader/>
                 <AnimatePresence>
