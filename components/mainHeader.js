@@ -6,7 +6,7 @@ import ColorToggle from "./colorToggle.js"
 import { useColorMode, Flex, Box, Center, Spacer, IconButton, Menu, MenuButton, MenuList } from "@chakra-ui/react"
 import { HamburgerIcon } from "@chakra-ui/icons"
 
-const Header = () => {
+const MainHeader = () => {
 
     const { colorMode, toggleColorMode } = useColorMode();
     const router = useRouter();
@@ -55,5 +55,5 @@ const Header = () => {
     )
 }
 
-export default Header
+export default MainHeader
 

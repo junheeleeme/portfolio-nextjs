@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { Box, Center, Text } from "@chakra-ui/react";
 
-const Footer = ({colorMode}) => {
+const MainFooter = ({colorMode}) => {
 
     const [_date, setDate] = useState();
     useEffect(()=>{
@@ -20,4 +20,4 @@ const Footer = ({colorMode}) => {
 
 }
 
-export default Footer
+export default MainFooter
