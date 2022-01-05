@@ -1,6 +1,7 @@
 import { Box, Tooltip, Center, Heading } from "@chakra-ui/react"
 import { SiReact, SiJavascript, SiNodedotjs, SiHtml5, SiCss3, SiJquery, SiStyledcomponents,
-    SiNextdotjs, SiMongodb, SiRedux, SiAmazonaws, SiMysql } from 'react-icons/Si';
+    SiNextdotjs, SiMongodb, SiRedux, SiAmazonaws, SiMysql } from 'react-icons/si'
+
 
 const SkillStack = () => {
     

@@ -3,7 +3,7 @@ import SlideRight from "../motion/slideRight.js"
 import SlideAnimation from "../motion/slideAnimation.js"
 import SubTitle from "../components/subtitle.js"
 import SkillStack from "../components/skillStack.js"
-import { List, ListItem, ListIcon, Center, Box } from "@chakra-ui/react"
+import { List, ListItem, ListIcon, Center } from "@chakra-ui/react"
 import { CheckCircleIcon } from "@chakra-ui/icons"
 
 
