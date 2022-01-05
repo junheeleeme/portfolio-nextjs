@@ -57,7 +57,7 @@ const Index = ({data}) => {
 }
 
 export const getStaticPaths = async() => {
-    const res = await axios.get('http://localhost:3000/pofol/portfolio.json');
+    const res = await axios.get('https://www.juni-official.com/pofolList.json');
     const paths = res.data.map(p => {
         return{
             params : { id : (p.id+1).toString() }
@@ -71,7 +71,7 @@ export const getStaticProps = async ({params}) => {
     const {id} = params;
 
     try{
-        const res = await axios.get('http://localhost:3000/pofol/portfolio.json');
+        const res = await axios.get('https://www.juni-official.com/pofolList.json');
         
         if(res.status === 200){
             const _data = res.data;

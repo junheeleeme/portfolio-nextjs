@@ -28,7 +28,7 @@ const portfolio = ({data}) => {
 export const getStaticProps = async() => {
 
     try{
-        const res = await axios.get('http://localhost:3000/pofol/portfolio.json');
+        const res = await axios.get('https://www.juni-official.com/pofolList.json');
         if(res.status === 200){
             const data = res.data;
             
