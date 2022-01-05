@@ -1,29 +1,19 @@
-import SlideAnimation from '../motion/slideAnimation';
+import dynamic from 'next/dynamic'
+import SlideAnimation from '../motion/slideAnimation'
+
+const NoSsr_IndexThree = dynamic(()=> import('../components/IndexThree'), { ssr : false});
 
 const index = ()=> {
-  return (
-    
+
+
+  return (    
     <>
       <SlideAnimation>
-        Hello
+        <NoSsr_IndexThree />
       </SlideAnimation>
-      
-      {/* <TyperWrap>
-        <Typewriter
-            options={{
-                strings: ['﹤ PORTFOLIO／﹥', `﹤ I'm Front-End Developer／﹥`, `﹤ I'm Web Developer／﹥`],
-                autoStart: true,
-                loop: true,
-                delay : 70,
-                deleteSpeed : 30,
-                pauseFor : 3000,
-            }}
-        />
-      </TyperWrap> */}
     </>
 
   )
 }
-
 
 export default index

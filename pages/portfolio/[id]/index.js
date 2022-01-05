@@ -1,3 +1,4 @@
+import { GetStaticPaths } from "next"
 import axios from "axios"
 import SlideAnimation from "../../../motion/slideAnimation"
 import SlideRight from "../../../motion/slideRight"
@@ -32,7 +33,7 @@ const Index = ({data}) => {
                     <Heading as='h3' size='md'>🧑🏻‍💻 Skill</Heading>
                     <Flex flexWrap='wrap' p='10px 0 30px 0'>
                         {
-                            data.skills.map((s, idx) => <Button key={s+idx} bg="blue.700" size="sm" fontSize='1em' color='#fff' m='0.25em'>
+                            data.skills.map((s, idx) => <Button key={s+idx} bg="blue.700" size="sm" fontSize='1em' color='#fff' m='0.25em' _hover={{ bg : 'blue.400'}} _focus={false}>
                                 {s}
                             </Button>)
                         }
@@ -41,12 +42,12 @@ const Index = ({data}) => {
                     <Flex flexWrap='nowrap' p='10px 0'>
                         <Link href={data.link[1]} passHref>
                             <Atag target="_blank" w='100%' m='0 3px' _hover={false}>
-                                <Button size='md' w='100%' bg='blue.500' color="#fff" _hover={false}>GitHub</Button>                            
+                                <Button size='md' w='100%' bg='blue.500' color="#fff" _focus={false} _active={false} _hover={{bg:'blue.600'}}>GitHub</Button>                            
                             </Atag>
                         </Link>
                         <Link href={data.link[1]} passHref>
                             <Atag target="_blank" w='100%' m='0 3px' _hover={false}>
-                                <Button size='md' w='100%' bg='blue.500' color="#fff" _hover={false}>View</Button>
+                                <Button size='md' w='100%' bg='blue.500' color="#fff" _focus={false} _active={false} _hover={{bg:'blue.600'}}>View</Button>
                             </Atag>
                         </Link>
                     </Flex>
@@ -56,7 +57,18 @@ const Index = ({data}) => {
     )
 }
 
-export const getServerSideProps = async ({params}) => {
+export const getStaticPaths = async() => {
+    const res = await axios.get('http://localhost:3000/pofol/portfolio.json');
+    const paths = res.data.map(p => {
+        return{
+            params : { id : (p.id+1).toString() }
+        } 
+    });
+
+    return { paths, fallback: false }
+}
+
+export const getStaticProps = async ({params}) => {
     const {id} = params;
 
     try{
@@ -76,5 +88,6 @@ export const getServerSideProps = async ({params}) => {
         return { props: {} };
     }
 }
+
 
 export default Index

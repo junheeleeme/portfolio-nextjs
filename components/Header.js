@@ -15,8 +15,8 @@ const Header = () => {
 
     return(
         <>
-        <Box as='header'>
-            <Box maxW={maxWid+'px'} h='70px' p='0 15px' transition='max-width 0.8s ease'>
+        <Box as='header' position='fixed' top='0' left='0' w='100%' h='70px' bg='rgba(255, 255, 255, 0.25)' zIndex='9999'>
+            <Box maxW={maxWid+'px'} p='0 15px' h='100%' transition='max-width 0.8s ease'>
                 <Flex h='100%'>
                     <Center position='relative' w="70px" h='100%' p='0 5px'>
                         <Logo colorMode={colorMode}/>
@@ -38,7 +38,7 @@ const Header = () => {
                     {/* Mobile Menu Toggle */}
                     <Center display={{base: 'flex', md: 'none'}} ml='10px' width='40px'>
                         <Menu isLazy id={`mobile-menu-id`}>
-                            <MenuButton as={IconButton} icon={<HamburgerIcon/>} w='40px' h='40px' p='0' m='auto' _hover={false} _focus={false} id='menu' islazy={'true'}
+                            <MenuButton as={IconButton} icon={<HamburgerIcon/>} w='40px' h='40px' p='0' m='auto' _hover={{ background : 'blackAlpha.300'}} _focus={false} id='menu' islazy={'true'}
                             borderWidth='1px'  borderColor={colorMode==='light'? 'blackAlpha.300':'whiteAlpha.300'} bg='none'/>
                         
                             <MenuList boxShadow='md' p='0'>

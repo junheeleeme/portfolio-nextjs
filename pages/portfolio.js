@@ -2,32 +2,36 @@ import HeadInfo from "../components/headInfo"
 import axios from "axios"
 import SlideRight from "../motion/slideRight"
 import SlideAnimation from "../motion/slideAnimation"
-import SubTitle from '../components/subtitle';
-import SlideShow from "../components/slideShow";
+import SubTitle from '../components/subtitle'
+import dynamic from "next/dynamic"
+
+const NoSsr_SlideShow = dynamic(()=> import('../components/slideShow'), { ssr : false }); 
 
 const portfolio = ({data}) => {
 
     return(
         <>
             <HeadInfo title="Portfolio" />
+
             <SlideRight>
                 <SubTitle txt='Portfolio'/>
             </SlideRight>
 
             <SlideAnimation>
-                <SlideShow data={data}/>
+                <NoSsr_SlideShow data={data} />
             </SlideAnimation>
         </>
     )
 }
 
-export const getServerSideProps = async() => {
+
+export const getStaticProps = async() => {
 
     try{
         const res = await axios.get('http://localhost:3000/pofol/portfolio.json');
         if(res.status === 200){
             const data = res.data;
-            console.log(data)
+            
             return { props : {
                 data
             } }
@@ -38,6 +42,5 @@ export const getServerSideProps = async() => {
     }
 
 }
-
 
 export default portfolio

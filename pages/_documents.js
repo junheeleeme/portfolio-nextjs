@@ -1,7 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components';
 import { ColorModeScript } from '@chakra-ui/react';
-import theme from '../theme/theme';
+import { theme } from '../theme/theme';
 
 // head에 들어갈 태그 및 폰트, 
 

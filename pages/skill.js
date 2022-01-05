@@ -3,8 +3,9 @@ import SlideRight from "../motion/slideRight"
 import SlideAnimation from "../motion/slideAnimation"
 import SubTitle from "../components/subtitle"
 import SkillStack from "../components/skillStack"
-import { List, ListItem, ListIcon, Center } from "@chakra-ui/react"
+import { List, ListItem, ListIcon, Center, Box } from "@chakra-ui/react"
 import { CheckCircleIcon } from "@chakra-ui/icons"
+
 
 const skill = () => {
     
@@ -20,7 +21,7 @@ const skill = () => {
                 
                 {/* Skill Stack */}
                 <SkillStack/>
-
+            
                 <Center p='30px 0 50px 0'>
                     <List spacing={3} fontSize='1.2em'>
                         <ListItem>

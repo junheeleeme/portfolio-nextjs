@@ -14,4 +14,7 @@ a { color: inherit; text-decoration: none; }
   .focus{ background-color: rgba(0,0,0,0.08) !important; }
 }
 .svgWrap{ position: relative; width: 80px; height: 80px; display: inline-block; margin: 10px 5px; }
-.svgWrap>svg{ width: 80px; height: 80px; }
+.svgWrap>svg{ width: 100%; height: 100%; }
+@media screen and (max-width: 768px) {
+  .svgWrap{ width: 60px; height: 60px; }
+}

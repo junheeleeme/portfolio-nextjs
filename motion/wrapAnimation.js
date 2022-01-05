@@ -14,11 +14,11 @@ const WrapAnimation = ({children}) => {
 
     return(
         <>
-            <Box w='100vw' minH='100vh' bg={ colorMode === 'light' ? 'gray.100' : 'gray.700'}> 
+            <Box w='100vw' minH='100vh' pt='70px' bg={ colorMode === 'light' ? 'gray.100' : 'gray.700'}> 
 
             <Header/>
                 <AnimatePresence>
-                    <motion.main key={router.route} transition={{ ease: "easeInOut", duration: 0.5 }} animate={animate.animate} exit={animate.exit} 
+                    <motion.main key={router.route} transition={{ ease: "easeInOut", duration: 0.4 }} animate={animate.animate} exit={animate.exit} 
                     style={{overflow: 'hidden'}}>
                         <Box as='section' maxW={maxWid} minH='calc(100vh - 100px)' p={{ base : '15px', xl : '50px 15px 15px 15px' }} position='relative'> 
                             {children}
