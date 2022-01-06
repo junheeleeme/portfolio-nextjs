@@ -1,7 +1,6 @@
 import HeadInfo from "../components/headInfo.js"
 import SubTitle from "../components/subtitle.js"
 import SkillStack from "../components/skillStack.js"
-import { motion } from "framer-motion"
 import { List, ListItem, ListIcon, Center } from "@chakra-ui/react"
 import { CheckCircleIcon } from "@chakra-ui/icons"
 
@@ -35,9 +34,7 @@ const skill = () => {
                             skills.map((s, idx) =>
                             
                                 <ListItem key={idx}>
-                                    <motion.div transition={}>
                                         <ListIcon as={CheckCircleIcon} color='green.500' />{s}
-                                    </motion.div>
                                 </ListItem>
                             )
                         }
