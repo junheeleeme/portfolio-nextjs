@@ -51,9 +51,8 @@ const SlideShow = ({data}) => {
 }
 
 const BoxWrap = styled(Center)`
-    position: absolute; top: 80px; left: 50%; transform: translate(-50%, 0); width: 100%; padding: 20px 0;
-    @media screen and (max-width: 1440px){ top: 0px; }
-    @media screen and (max-width: 1280px){ top: 30px; }
+    position: absolute; top: 55%; left: 50%; transform: translate(-50%, -50%); width: 100%; padding: 20px 0;
+    @media screen and (max-width: 1280px){ top: 50%; }
     & .swiper-pagination-bullet{ background: ${props=>props.mode==='light'?'#000':'#fff'} }
     
     .swiper{ 

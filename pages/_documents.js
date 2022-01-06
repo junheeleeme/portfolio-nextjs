@@ -34,7 +34,7 @@ export default class MyDocument extends Document {
     render() {
     return (
         <Html lang="ko">
-            <Head/>
+            
             <body>
                 <ColorModeScript initialColorMode={theme.config.initialColorMode}/>
                 <Main/>

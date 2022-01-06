@@ -4,7 +4,7 @@ const SubTitle = ({txt}) => {
 
     return(
         <>
-            <Heading as='h2' display='block' position='relative' size='2xl' pb={{ base : '30px' ,md:'40px'}}>
+            <Heading as='h2' display='block' position='relative' size='xl' pb={{ base : '20px' ,md:'30px'}}>
                 {txt}
             </Heading>
         </>

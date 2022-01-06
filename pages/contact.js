@@ -1,10 +1,10 @@
 import HeadInfo from "../components/headInfo.js"
 import SlideRight from "../motion/slideRight.js"
-import SlideAnimation from "../motion/slideAnimation.js"
+import SlideUp2Ani from "../motion/slideUp2Ani.js"
 import SubTitle from "../components/subtitle.js"
 import { useToast as UseToast } from '@chakra-ui/react'
 import { useRef as UseRef } from "react"
-import { Heading, List, ListItem, Input, Link, Box, Tooltip } from "@chakra-ui/react"
+import { Heading, List, ListItem, Input, Link, Tooltip } from "@chakra-ui/react"
 import { LinkIcon, CopyIcon } from "@chakra-ui/icons"
 
 const contact = () => {
@@ -30,34 +30,36 @@ const contact = () => {
     return(
         <>
             <HeadInfo title='Contact' />
-            <SlideRight>
-                <SubTitle txt='Contact' />
-            </SlideRight>
             
-            <Box position='absolute' bottom='50px' left='15px' overflow='hidden'>
-            <SlideAnimation> 
-                <Heading as='h3' size='3xl' pb='50px' wordBreak='keep-all' lineHeight='1.2em'>방문해 주셔서 감사합니다.</Heading>
-                <List spacing={2} fontSize="1.3em">
-                    <ListItem>
-                        🧑🏻  이준희(Lee JunHee)
-                    </ListItem>
-                    <ListItem>
-                        ✉️ macjjuni@gmail.com<Tooltip label='Copy'><CopyIcon cursor='pointer' ml="10px" data-option="0" onClick={copyLink}/></Tooltip>
-                    </ListItem>
-                    <ListItem>
-                        📱 (+82) 010-5183-1652<Tooltip label='Copy'><CopyIcon cursor='pointer' ml="10px" data-option="1" onClick={copyLink}/></Tooltip>
-                    </ListItem>
-                    <ListItem>
-                        📝 Tistory Blog<Link href="https://juni-official.tistory.com/" target='_blank' ml='10px'><LinkIcon borderRadius='5px'/></Link>
-                    </ListItem>
-                    <ListItem>
-                        🧑🏻‍💻 GitHub<Link href="https://github.com/junheeleeme" target='_blank' ml='10px'><LinkIcon borderRadius='5px'/></Link>
-                    </ListItem>
-                </List>
-                <Input position="absolute" bottom='-9999px' type="text" defaultValue="macjjuni@gmail.com" ref={email} readOnly/>
-                <Input position="absolute" bottom='-9999px' type="text" defaultValue="010-5183-1652" ref={phone} readOnly/>
-            </SlideAnimation>
-            </Box>
+            <SubTitle txt='Contact' />
+            
+            
+
+            <Heading as='h3' size='3xl' pb='50px' wordBreak='keep-all' lineHeight='1.2em'>방문해 주셔서 감사합니다.</Heading>
+            <List spacing={2} fontSize="1.3em">
+                <ListItem>
+                    🧑🏻  이준희(Lee JunHee)
+                </ListItem>
+                <ListItem>
+                    ✉️ macjjuni@gmail.com
+                    <Tooltip label='Copy'><CopyIcon cursor='pointer' ml="10px" data-option="0" onClick={copyLink}/></Tooltip>
+                </ListItem>
+                <ListItem>
+                    📱 (+82) 010-5183-1652
+                    <Tooltip label='Copy'><CopyIcon cursor='pointer' ml="10px" data-option="1" onClick={copyLink}/></Tooltip>
+                </ListItem>
+                <ListItem>
+                    📝 Tistory Blog
+                    <Link href="https://juni-official.tistory.com/" target='_blank' ml='10px'><Tooltip label='새 탭에서 열기'><LinkIcon borderRadius='5px'/></Tooltip></Link>
+                </ListItem>
+                <ListItem>
+                    🧑🏻‍💻 GitHub
+                    <Link href="https://github.com/junheeleeme" target='_blank' ml='10px'><Tooltip label='새 탭에서 열기'><LinkIcon borderRadius='5px'/></Tooltip></Link>
+                </ListItem>
+            </List>
+            <Input position="absolute" bottom='-9999px' type="text" defaultValue="macjjuni@gmail.com" ref={email} readOnly/>
+            <Input position="absolute" bottom='-9999px' type="text" defaultValue="010-5183-1652" ref={phone} readOnly/>
+
 
             
         </>

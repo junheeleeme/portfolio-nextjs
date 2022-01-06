@@ -1,5 +1,5 @@
 import axios from "axios"
-import SlideAnimation from "../../../motion/slideAnimation"
+import SlideUp2Ani from "../../../motion/slideUp2Ani"
 import SlideRight from "../../../motion/slideRight"
 import Link from "next/link"
 import { Box, Heading, Image, Flex, Button, Link as Atag } from "@chakra-ui/react"
@@ -20,7 +20,7 @@ const Index = ({data}) => {
                     </Heading>
                 </SlideRight>
 
-                <SlideAnimation>
+                <SlideUp2Ani>
                     <Box>
                         <Box display='block' w='100%'>
                             <Image src={data.gif} alt={data.title} w='100%' h='auto' m='20px auto'/>
@@ -50,7 +50,7 @@ const Index = ({data}) => {
                             </Atag>
                         </Link>
                     </Flex>
-                </SlideAnimation>
+                </SlideUp2Ani>
             </Box>
         </>
     )
