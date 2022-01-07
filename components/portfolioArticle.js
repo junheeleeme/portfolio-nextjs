@@ -6,7 +6,7 @@ const PortfolioArticle = ({data}) => {
     return(
         <>
         { 
-            <Box position='relative' borderRadius='5px' overflow='hidden' position='relative' w='100%' h='100%'
+            <Box position='relative' borderRadius='5px' overflow='hidden' w='100%' h='100%'
             boxShadow='rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px'>
                 <Link href={'/portfolio/'+(data.id+1)} passHref>
                     <LinkStyled >
