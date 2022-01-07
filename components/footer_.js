@@ -10,9 +10,11 @@ const Footer = ({colorMode}) => {
 
     return(
         <>
-            <Box as='footer'>
-                <Center h='30px'>
-                    <Text fontSize='sm' color={colorMode==='light'?'gray.500':'gray.400'}>{_date}. juni-official All rights reserved</Text>
+            <Box as='footer' position='absolute' bottom='0' left='0' w='100%'>
+                <Center h='40px'>
+                    <Text fontSize='sm' color={colorMode==='light'?'gray.500':'gray.400'} h='100%' lineHeight='40px'>
+                        {_date}. juni-official All rights reserved
+                    </Text>
                 </Center>
             </Box>
         </>

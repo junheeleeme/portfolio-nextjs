@@ -32,21 +32,19 @@ const contact = () => {
             <HeadInfo title='Contact' />
             
             <SubTitle txt='Contact' />
-            
-            
 
-            <Heading as='h3' size='3xl' pb='50px' wordBreak='keep-all' lineHeight='1.2em'>방문해 주셔서 감사합니다.</Heading>
-            <List spacing={2} fontSize="1.3em">
+            <Heading as='h3' size='2xl' p={{base: '30px 0 30px', lg: '100px 0 30px'}} wordBreak='keep-all' lineHeight='1.2em'>방문해 주셔서 감사합니다.</Heading>
+            <List spacing={2} fontSize="1.1em">
                 <ListItem>
                     🧑🏻  이준희(Lee JunHee)
                 </ListItem>
                 <ListItem>
                     ✉️ macjjuni@gmail.com
-                    <Tooltip label='Copy'><CopyIcon cursor='pointer' ml="10px" data-option="0" onClick={copyLink}/></Tooltip>
+                    <Tooltip label='복사하기'><CopyIcon cursor='pointer' ml="10px" data-option="0" onClick={copyLink}/></Tooltip>
                 </ListItem>
                 <ListItem>
                     📱 (+82) 010-5183-1652
-                    <Tooltip label='Copy'><CopyIcon cursor='pointer' ml="10px" data-option="1" onClick={copyLink}/></Tooltip>
+                    <Tooltip label='복사하기'><CopyIcon cursor='pointer' ml="10px" data-option="1" onClick={copyLink}/></Tooltip>
                 </ListItem>
                 <ListItem>
                     📝 Tistory Blog
@@ -59,9 +57,6 @@ const contact = () => {
             </List>
             <Input position="absolute" bottom='-9999px' type="text" defaultValue="macjjuni@gmail.com" ref={email} readOnly/>
             <Input position="absolute" bottom='-9999px' type="text" defaultValue="010-5183-1652" ref={phone} readOnly/>
-
-
-            
         </>
     )
 }

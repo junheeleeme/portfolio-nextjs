@@ -10,13 +10,12 @@ const Header = () => {
 
     const { colorMode, toggleColorMode } = useColorMode();
     const router = useRouter();
-    const maxWid = router.pathname === '/' ? 1200 : 800;
 
     return(
         <>
         <Box as='header' position='fixed' top='0' left='0' w='100%' h={{ base: '60px', md : '70px'}} zIndex='9999'
-            bg={colorMode === 'light' ? 'blackAlpha.50' : 'blackAlpha.500' }>
-            <Box maxW={maxWid+'px'} p='0 15px' h='100%' transition='max-width 0.8s ease'>
+            bg={colorMode === 'light' ? 'rgba(0,0,0,0)' : 'blackAlpha.300'} backdropFilter='blur(4px)' boxShadow='rgba(90, 90, 90, 0.12) 0px 1px 3px, rgba(90, 90, 90, 0.24) 0px 1px 2px'>
+            <Box maxW='800px' h='100%' p='0 10px' transition='max-width 0.8s ease'>
                 <Flex h='100%'>
                     <Center position='relative' w="70px" h='100%' p='0 5px'>
                         <Logo colorMode={colorMode}/>

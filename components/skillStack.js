@@ -8,9 +8,9 @@ const SkillStack = () => {
 
     return(
         <>
-            <Heading as="h3" fontSize='1.7em' p={{ base : '10px 0 20px' , md : '10px 0 30px 0'}}>💁🏻‍♂️ 기술 스택</Heading>
+            <Heading as="h3" fontSize='1.5em' p={{ base : '15px 0' , md : '10px 0'}}>💁🏻‍♂️ 기술 스택</Heading>
 
-            <Center p='20px 0 40px' flexWrap='wrap' minH='160px' justifyContent='space-around'>
+            <Center p={{base : '10px 0 20px 0', lg : '20px 0 30px'}} flexWrap='wrap' minH='160px' justifyContent='space-around'>
 
                 <Tooltip label='JavaScript' w='100%'>
                     <Box  className='svgWrap'><SiJavascript color="#f7e018"/></Box>
@@ -39,9 +39,9 @@ const SkillStack = () => {
                     
             </Center>
 
-            <Heading as="h3" fontSize='1.7em' p={{ base : '10px 0 20px' , md : '30px 0 30px 0'}}>🙋🏻‍♂️ 사용해본 기술 스택</Heading>
+            <Heading as="h3" fontSize='1.5em' p={{ base : '15px 0' , md : '10px 0'}}>🙋🏻‍♂️ 사용해본 기술 스택</Heading>
 
-            <Center p={{ base : '20px 0 20px' , md : '20px 0 40px 0'}} minH='160px' flexWrap='wrap' justifyContent='space-around'>    
+            <Center p={{base : '10px 0 20px 0', lg : '20px 0 30px'}} minH='160px' flexWrap='wrap' justifyContent='space-around'>    
                 <Center>
                     <Tooltip label='AWS EC2'>
                         <Box className='svgWrap'><SiAmazonaws color="#ff9a02" /></Box>

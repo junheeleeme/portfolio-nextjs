@@ -16,8 +16,6 @@ const skill = () => {
         'AWS EC2, MySQL/MongoDB와 Express를 연동한 클라이언트와 서버를 구성 할 수 있습니다.'
     ]
 
-    
-
     return(
         <>
             <HeadInfo title='Skill' />
@@ -28,7 +26,7 @@ const skill = () => {
                 {/* Skill Stack */}
                 <SkillStack/>
             
-                <Center p='30px 0 50px 0'>
+                <Center p='20px 0 30px 0'>
                     <List spacing={3} fontSize='1.2em'>
                         {
                             skills.map((s, idx) =>

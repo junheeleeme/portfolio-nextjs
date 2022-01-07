@@ -3,10 +3,8 @@ import axios from "axios"
 import SubTitle from '../components/subtitle.js'
 import { SimpleGrid, Box } from '@chakra-ui/react'
 import { Image } from "@chakra-ui/react"
+import PortfolioArticle from "../components/portfolioArticle.js"
 
-import dynamic from "next/dynamic"
-
-const NoSsr_SlideShow = dynamic(()=> import('../components/slideShow'), { ssr : false }); 
 
 const portfolio = ({data}) => {
 
@@ -15,20 +13,14 @@ const portfolio = ({data}) => {
             <HeadInfo title="Portfolio" />
             <SubTitle txt='Portfolio'/>      
 
-            <SimpleGrid columns={2} spacing={10}>
-            {
-                data.map((d, idx)=> 
-                    <Box key={d.id+idx}>
-                        <Image src={`/pofol/${d.title}_cover.png`} alt={d.title} w='100%' h='100%'/>
-                    </Box>
-
-
-                )
-            }
-                <Box bg='tomato' height='80px'></Box>
+            <SimpleGrid columns={{base: 1, sm :2}} spacing={10} gap={{base : '30px', md: '25px', lg:'50px'}}
+            p={{base:"20px 15px", sm : '30px 5px', md : '30px 0' }} >
+                {
+                    data.sort((a, b)=> b.id-a.id).map((d, idx)=> //
+                        <PortfolioArticle data={d} key={d.title+idx}/>
+                    )
+                }
             </SimpleGrid>
-                                
-
             {/* <NoSsr_SlideShow data={data} /> */}
         </>
     )
