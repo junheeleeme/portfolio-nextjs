@@ -15,11 +15,11 @@ const Voxel = () => {
             }
         }, 500);
     }, []);
-    
+
 
     return(
         <>
-            <Box w='100%' h='450px' m='-20px 0 -100px 0' position='relative'>
+            <Box w='100%' h='450px' m={{base : '-60px 0 -90px 0', md : '-70px 0 -100px 0' }} position='relative'>
                 {
                     loaded === false ?
                     <Center position='absolute' top='0' left='0' w='100%' h='100%' zIndex='9999'>
@@ -28,9 +28,11 @@ const Voxel = () => {
                     :
                     <></>
                 }
+                {/* disable-zoom='false' */}
                 <Box position='relative' opacity={loaded === true ? '1' : '0'} transition='opacity 1s ease'>
-                    <model-viewer ref={view} src='/voxel_jjuni-official.gltf' camera-controls auto-rotate  disable-zoom='false'
-                    shadow-intensity="3" autoplay environment-image="neutral" alt='꾸생 아바타' 
+                    <model-viewer ref={view} src='/voxel_juni_coding.gltf' camera-controls  autoplay auto-rotate
+                    shadow-intensity="3" shadow-softness='1' alt='꾸생 아바타' camera-orbit='150deg 65deg 110%' 
+                    environment-image='neutral'
                     style={{width : '100%', height : '450px' ,'--progress-bar-height' : '0' , '--progress-mask' : 'none'}}/>
                 </Box>
             </Box>

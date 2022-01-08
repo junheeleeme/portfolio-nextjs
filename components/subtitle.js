@@ -6,7 +6,7 @@ const SubTitle = ({txt}) => {
 
     return(
         <>
-            <Heading as='h2' display='block' position='relative' size='xl' p={{ base : '10px 0 20px 0' ,lg:' 15px 0 30px'}}
+            <Heading as='h2' display='block' position='relative' size='xl' p={{ base : '0 0 20px 0' ,lg:' 0 0 30px'}}
             textDecoration='underline' textDecorationColor={colorMode === 'light'?'#000':'#fff'} textUnderlineOffset='7px'>
                 {txt}
             </Heading>

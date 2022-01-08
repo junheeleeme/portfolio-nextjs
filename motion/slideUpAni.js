@@ -1,5 +1,4 @@
 import { useRouter } from "next/router"
-import { Box } from '@chakra-ui/react'
 import { motion } from "framer-motion"
 import { AnimatePresence } from 'framer-motion'
 

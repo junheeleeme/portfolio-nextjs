@@ -1,6 +1,4 @@
 import HeadInfo from "../components/headInfo.js"
-import SlideRight from "../motion/slideRight.js"
-import SlideUp2Ani from "../motion/slideUp2Ani.js"
 import SubTitle from "../components/subtitle.js"
 import { useToast as UseToast } from '@chakra-ui/react'
 import { useRef as UseRef } from "react"

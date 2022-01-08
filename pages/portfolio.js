@@ -1,8 +1,7 @@
 import HeadInfo from "../components/headInfo.js"
 import axios from "axios"
 import SubTitle from '../components/subtitle.js'
-import { SimpleGrid, Box } from '@chakra-ui/react'
-import { Image } from "@chakra-ui/react"
+import { SimpleGrid } from '@chakra-ui/react'
 import PortfolioArticle from "../components/portfolioArticle.js"
 
 
