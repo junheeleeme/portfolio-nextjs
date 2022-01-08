@@ -2,11 +2,11 @@ import { useRef, useEffect, useState } from "react"
 import { Box, Center, Spinner } from "@chakra-ui/react";
 
 const Voxel = () => {
-    
+
+
     const [loaded, setLoaded] = useState(false);
     const view = useRef(null); //속성 변화 감지 노드
     
-
     useEffect(()=>{
         const interval = setInterval(() => {
             if(view.current.loaded === true) {
@@ -14,6 +14,8 @@ const Voxel = () => {
                 clearInterval(interval);
             }
         }, 500);
+        console.dir(view.current)
+        
     }, []);
 
 
@@ -32,8 +34,9 @@ const Voxel = () => {
                 <Box position='relative' opacity={loaded === true ? '1' : '0'} transition='opacity 1s ease'>
                     <model-viewer ref={view} src='/voxel_juni_coding.gltf' camera-controls  autoplay auto-rotate
                     shadow-intensity="3" shadow-softness='1' alt='꾸생 아바타' camera-orbit='150deg 65deg 110%' 
-                    environment-image='neutral'
-                    style={{width : '100%', height : '450px' ,'--progress-bar-height' : '0' , '--progress-mask' : 'none'}}/>
+                    environment-image='neutral' interaction-prompt='none' min-field-of-view='10deg' max-field-of-view='60deg'
+                    max-camera-orbit="Infinity 180deg auto" min-camera-orbit='-Infinity 0deg auto' interpolation-decay='30' 
+                    style={{width : '100%', height : '450px' ,'--progress-bar-height' : '0' , '--progress-mask' : 'none', 'cursor' : 'default'}}/>
                 </Box>
             </Box>
         </>

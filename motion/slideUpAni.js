@@ -12,7 +12,7 @@ const SlideUpAni = ({children}) => {
             <AnimatePresence exitBeforeEnter={true}> 
                 <motion.main key={router.route} transition={{ ease: "easeInOut", duration: 0.3 }}
                 initial={animate.initial} animate={animate.animate} exit={animate.exit} style={{overflow: 'hidden'}}>
-
+                    
                         {children}
 
                 </motion.main>
