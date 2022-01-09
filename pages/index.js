@@ -1,12 +1,13 @@
-import { Wrap, WrapItem, Center, Image, Box, UnorderedList, ListItem } from "@chakra-ui/react"
-import IntroTitle from "../components/introTitle"
+import { Wrap, WrapItem, Center, Image, Box, UnorderedList, ListItem, Heading } from "@chakra-ui/react"
 
 const index = ()=> {
 
   return (    
     <Box>
-      
-      <IntroTitle txt='안녕하세요.👋 프론트엔드 개발자를 지향하는 이준희입니다.' />
+      <Heading as='h2' fontSize='1.1em' w='100%' p='10px' letterSpacing='0.05em' color='white' 
+        textAlign='center' bg='blackAlpha.400' borderRadius='8px' wordBreak='keep-all'>
+            안녕하세요.👋 프론트엔드 개발자를 지향하는 이준희입니다.
+        </Heading>
 
       <Wrap p='40px 0' justify='center'>
 
@@ -29,7 +30,7 @@ const index = ()=> {
           </Center>
         </WrapItem>
 
-        <WrapItem p={{base: '20px 0', md: '0'}} w={{ base : '100%', md:'180px'}} >
+        <WrapItem pt={{base: '40px', md: '0'}} w={{ base : '100%', md:'180px'}} >
           <Center borderRadius='50%' overflow='hidden' m='auto'>
             <Image src='/profile2.png' w='180px' h='180px'/>
           </Center>

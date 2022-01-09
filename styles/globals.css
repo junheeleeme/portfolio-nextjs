@@ -1,9 +1,6 @@
 @charset "utf8";
 
 /* CSS Reset */
-:root{
-  --poster-color:  transparent !important;
-}
 .userInput:focus-visible { outline: 0 !important; }
 
 html,body {
