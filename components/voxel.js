@@ -1,19 +1,44 @@
 import { useRef, useEffect, useState } from "react"
-import { Box, Center, Spinner } from "@chakra-ui/react";
+import { Box, Center, Spinner, Button } from "@chakra-ui/react";
 
 const Voxel = () => {
 
+    let course = 0;
+    const speedTable = [2100, 1600, 1000, 600, 400, 280, 200, 150, 100, 70, 40, 20, 10];
+    const [speed, setSpeed] = useState(speedTable[course]);
+    
     const [loaded, setLoaded] = useState(false);
     const view = useRef(null); //속성 변화 감지 노드
     
     useEffect(()=>{
         const interval = setInterval(() => {
             if(view.current.loaded === true) {
+                console.log('로딩 종료')
                 setLoaded(true);
+                Init();
                 clearInterval(interval);
             }
         }, 500);        
     }, []);
+
+    const Init = () => {
+        setTimeout(()=>{
+            const interval2 = setInterval(() => {
+                const before = Number(view.current.getAttribute('rotation-per-second').replace('deg', ''));
+                if( before < 20){
+                    clearInterval(interval2);
+                }else{
+                    setSpeed(speedTable[++course]);
+                    console.log( speedTable[course] + '로 변경')
+                }
+            }, 250);
+        }, 1000)
+    }
+
+    // const setInit = () => {
+    //     view.current.setAttribute('rotation-per-second', '1600deg');
+    //     course = 0;
+    // }
 
     return(
         <>
@@ -31,10 +56,13 @@ const Voxel = () => {
                     <model-viewer ref={view} src='/juni-coding-voxel.gltf' camera-controls  autoplay auto-rotate
                     shadow-intensity="3" shadow-softness='1' alt='꾸생 아바타' camera-orbit='150deg 65deg 110%' 
                     environment-image='neutral' interaction-prompt='none' min-field-of-view='10deg' max-field-of-view='130deg'
-                    max-camera-orbit="Infinity 180deg auto" min-camera-orbit='-Infinity 0deg auto' interpolation-decay='30' 
+                    max-camera-orbit="Infinity 180deg auto" min-camera-orbit='-Infinity 0deg auto' interpolation-decay='30'
+                    auto-rotate-delay='0' rotation-per-second={speed+'deg'}
                     style={{width : '100%', height : '450px' ,'--progress-bar-height' : '0' , '--progress-mask' : 'none', '--poster-color':  'transparent' }} />
                 </Box>
             </Box>
+            {/* <Button onClick={Init}>Test</Button> */}
+            {/* <Button onClick={setInit}>Set Init</Button> */}
         </>
     )
 }
