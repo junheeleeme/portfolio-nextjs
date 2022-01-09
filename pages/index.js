@@ -4,7 +4,7 @@ const index = ()=> {
 
   return (    
     <Box>
-      <Heading as='h2' fontSize='1.1em' w='100%' p='10px' letterSpacing='0.05em' color='white' 
+      <Heading as='h2' fontSize='1.3em'   w='100%' p='10px' letterSpacing='0.05em' color='white' 
         textAlign='center' bg='blackAlpha.400' borderRadius='8px' wordBreak='keep-all'>
             안녕하세요.👋 프론트엔드 개발자를 지향하는 이준희입니다.
         </Heading>
@@ -13,7 +13,7 @@ const index = ()=> {
 
         <WrapItem> 
           <Center w={{base : '100%', md : '550px'}} p='10px'>
-            <UnorderedList spacing={3} fontSize='1.12em'>
+            <UnorderedList spacing={3} fontSize='1.2em'>
               <ListItem>
                 변화와 도전을 통해 성장하며 유연한 사고를 위해 끊임없이 배우려는 개발자입니다.
               </ListItem>
