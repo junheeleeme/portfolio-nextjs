@@ -18,7 +18,7 @@ const Layout = ({children}) => {
     return(
         <>
             <Header/>
-            <Box position='relative' w='100vw' minH='100vh' p={{base : '60px 0 30px', md: '70px 0 40px'}} bg={ colorMode === 'light' ? 'gray.100' : 'gray.700'}> 
+            <Box position='relative' w='100vw' minH='100vh' p='60px 0 30px' bg={ colorMode === 'light' ? 'gray.100' : 'gray.700'}> 
                 <Box position='relative' maxW='800px'>
 
                     <NoSsr_Voxel/>

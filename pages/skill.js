@@ -7,7 +7,6 @@ import { CheckCircleIcon } from "@chakra-ui/icons"
 
 const skill = () => {
     
-    const delay = [0.4, 0.8, 1.2, 1.6, 2.0];
     const skills = [
         '웹표준, 웹 접근성 및 SEO를 고려한 시멘틱 마크업 작업이 가능합니다.',
         'HTML/CSS로 주어진 디자인 레이아웃에 따라 웹을 디자인할 수 있습니다.',

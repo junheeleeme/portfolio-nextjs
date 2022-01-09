@@ -11,7 +11,7 @@ const Index = ({data}) => {
 
     return(
         <>
-            <Box as='section' maxW='760px' p={{base: '0', lg: '40px 0'}}>
+            <Box as='section'>
                 <SlideRight>
                     <Heading as='h2' display='block' position='relative' size='lg' pb='30px' textOverflow='ellipsis' overflow='hidden' 
                         whiteSpace='nowrap' borderBottomColor='colors.end'>
@@ -51,7 +51,7 @@ const Index = ({data}) => {
                         </Link>
                     </Flex>
                 </SlideUp2Ani>
-            </Box>
+            </Box>      
         </>
     )
 }
