@@ -13,7 +13,7 @@ const portfolio = ({data}) => {
             <SubTitle txt='Portfolio'/>      
 
             <SimpleGrid columns={{base: 1, sm :2}} spacing={10} gap={{base : '30px', md: '25px', lg:'50px'}}
-            p={{base:"20px 15px", sm : '30px 5px', md : '30px 0' }} >
+            p={{base:"30px 15px", sm : '30px 5px', md : '30px 0' }} >
                 {
                     data.sort((a, b)=> b.id-a.id).map((d, idx)=> //
                         <PortfolioArticle data={d} key={d.title+idx}/>

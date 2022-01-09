@@ -4,7 +4,7 @@ import { Box, Center, Spinner, Button } from "@chakra-ui/react";
 const Voxel = () => {
 
     let course = 0;
-    const speedTable = [2000, 1600, 1000, 600, 400, 280, 200, 150, 100, 70, 40, 20, 10];
+    const speedTable = [2500, 1500, 900, 400, 200, 120, 80, 40, 10];
     
     const [loaded, setLoaded] = useState(false);
     const view = useRef(null); //속성 변화 감지 노드
@@ -12,7 +12,6 @@ const Voxel = () => {
     useEffect(()=>{
         const interval = setInterval(() => {
             if(view.current.loaded === true) {
-                console.log('로딩 종료')
                 setLoaded(true);
                 Init();
                 clearInterval(interval);
@@ -28,9 +27,8 @@ const Voxel = () => {
                     clearInterval(interval2);
                 }else{
                     view.current.setAttribute('rotation-per-second', speedTable[++course]+'deg');
-                    console.log( speedTable[course] + '로 변경')
                 }
-            }, 300);
+            }, 250);
         }, 500)
     }
 
@@ -51,7 +49,7 @@ const Voxel = () => {
                     <></>
                 }
                 {/* disable-zoom='false' */}
-                <Box position='relative' opacity={loaded === true ? '1' : '0'} transition='opacity 1s ease'>
+                <Box position='relative' opacity={loaded === true ? '1' : '0'} transition='opacity .7s ease'>
                     <model-viewer ref={view} src='/juni-coding-voxel.gltf' camera-controls  autoplay auto-rotate
                     shadow-intensity="3" shadow-softness='1' alt='꾸생 아바타' camera-orbit='150deg 65deg 110%' 
                     environment-image='neutral' interaction-prompt='none' min-field-of-view='10deg' max-field-of-view='130deg'
