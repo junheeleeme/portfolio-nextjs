@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { SimpleGrid, Box, Link as LinkStyled, Text, Button, Image, Heading, Spinner } from '@chakra-ui/react'
+import { SimpleGrid, Box, Link as LinkStyled, Text, Button, Image, Heading, Spinner, Center } from '@chakra-ui/react'
 
 const Content_List = ({posts}) => {
     console.log(posts);
@@ -8,7 +8,9 @@ const Content_List = ({posts}) => {
             {
                 posts === null 
                     ?
-                <Spinner/>
+                <Center>
+                    <Spinner/>
+                </Center>
                     :
                 <>    
                 <Heading as='h2' size='md' pb={{base: '30px', sm: '10px'}}>최근 포스트</Heading>
