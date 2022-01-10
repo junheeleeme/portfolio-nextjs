@@ -4,7 +4,7 @@ import { Box, Center, Spinner, Button } from "@chakra-ui/react";
 const Voxel = () => {
 
     let course = 0;
-    const speedTable = [2500, 1500, 900, 400, 200, 120, 80, 40, 10];
+    const speedTable = [2500, 1500, 900, 400, 200, 120, 80, 50, 40, 30, 20, 10];
     
     const [loaded, setLoaded] = useState(false);
     const view = useRef(null); //속성 변화 감지 노드

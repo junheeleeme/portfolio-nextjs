@@ -1,16 +1,26 @@
 @charset "utf8";
 
-/* CSS Reset */
-.userInput:focus-visible { outline: 0 !important; }
+@font-face {
+  font-family: 'SBAggroM';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroM.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
+/* CSS Reset */
 html,body {
   padding: 0; margin: 0;
   font-family: 'Nanum Gothic', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
+
 a { color: inherit; text-decoration: none; }
 * { box-sizing: border-box; margin: 0 auto; }
+
 .focus{ font-weight: bold; }
+.userInput:focus-visible { outline: 0 !important; }
+
+/* CSS Reset */
 @media screen and (max-width: 768px) {
   .focus{ background-color: rgba(0,0,0,0.08) !important; }
 }
@@ -18,8 +28,4 @@ a { color: inherit; text-decoration: none; }
 .svgWrap>svg{ width: 100%; height: 100%; }
 @media screen and (max-width: 768px) {
   .svgWrap{ width: 60px; height: 60px; }
-}
-@keyframes lazyShow{
-  0%{ opacity: 0; }
-  100%{ opacity: 1; }
 }

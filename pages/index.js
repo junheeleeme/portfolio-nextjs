@@ -4,12 +4,13 @@ const index = ()=> {
 
   return (    
     <Box>
-      <Heading as='h2' fontSize='1.3em'   w='100%' p='0.5em' letterSpacing='0.05em' color='white' 
-        textAlign='center' bg='blackAlpha.400' borderRadius='8px' wordBreak='keep-all' boxShadow='rgba(99, 99, 99, 0.2) 0px 2px 8px 0px'>
+      <Heading as='h2' w='100%' p={{base : '10px', md : '10px'}} color='white' letterSpacing='0.05em' userSelect='none'
+        fontFamily='SBAggroM' fontSize={{base : '1.25em', md : '1.35em'}} lineHeight={{base: '1.33', md : 'normal'}} 
+        textAlign='center' bg='blackAlpha.500' borderRadius='4px' wordBreak='keep-all' boxShadow='rgba(99, 99, 99, 0.2) 0px 2px 8px 0px'>
             안녕하세요.👋 프론트엔드 개발자를 지향하는 이준희입니다.
       </Heading>
 
-      <Wrap p='40px 0' justify='center'>
+      <Wrap p={{base: '30px 0', md : '40px 0px'}} justify='center'>
 
         <WrapItem> 
           <Center w={{base : '100%', md : '550px'}} p='10px'>

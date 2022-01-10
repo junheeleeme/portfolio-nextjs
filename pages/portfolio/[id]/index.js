@@ -31,11 +31,17 @@ const Index = ({data}) => {
                     </Box>
                     <Heading as='h3' size='md'>🧑🏻‍💻 Skill</Heading>
                     <Flex flexWrap='wrap' p='10px 0 30px 0'>
+                        
                         {
-                            data.skills.map((s, idx) => <Button key={s+idx} bg="blue.700" size="sm" fontSize='1em' color='#fff' m='0.25em' _hover={{ bg : 'blue.400'}} _focus={false}>
-                                {s}
-                            </Button>)
+                            data.skills.map((s, idx) => 
+
+                                <Button key={s+idx} bg="purple.400" size="sm" fontSize='1em' color='#fff' m='0.25em' 
+                                borderRadius='full' _hover={{ bg : 'purple.500'}} _focus={false}>
+                                    {s}
+                                </Button>)
+
                         }
+
                     </Flex>
                     <Heading as='h3' size='md'>🔗 Link</Heading>
                     <Flex flexWrap='nowrap' p='10px 0'>
