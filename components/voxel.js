@@ -1,5 +1,5 @@
 import { useRef, useEffect, useState } from "react"
-import { Box, Center, Spinner, Button } from "@chakra-ui/react";
+import { Box, Center, Spinner } from "@chakra-ui/react";
 
 const Voxel = () => {
 

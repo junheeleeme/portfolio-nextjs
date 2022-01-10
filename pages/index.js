@@ -1,12 +1,9 @@
-import { useColorMode } from "@chakra-ui/react"
 import { Wrap, WrapItem, Center, Image, Box, UnorderedList, ListItem, Heading,
 SimpleGrid, Link as LinkStyled, Text, Button } from "@chakra-ui/react"
 import Link from "next/link"
 import axios from "axios"
 
 const index = ({posts})=> {
-
-  const { colorMode } = useColorMode();
 
   return (    
     <Box>
@@ -48,9 +45,7 @@ const index = ({posts})=> {
 
       <Box>
 
-        <Heading as='h2' size='md' pb={{base: '30px', sm: '20px'}} textDecoration='underline'textDecorationColor={colorMode === 'light'?'#000':'#fff'} textUnderlineOffset='7px'>
-          최근 포스트
-        </Heading>
+        <Heading as='h2' size='md' pb={{base: '30px', sm: '10px'}}>최근 포스트</Heading>
 
         <SimpleGrid columns={{base: 1, sm: 2, md: 3}} spacingX='20px' spacingY={{base: '30px', sm : '15px'}}
         p={{base : '0 15px', sm : '20px 0'}}>
