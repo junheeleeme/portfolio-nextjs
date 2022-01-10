@@ -49,7 +49,7 @@ const index = ({posts})=> {
 
 export const getServerSideProps = async() => {
   try{
-    const { data } = await axios('http://localhost/api/posts');
+    const { data } = await axios('http://juni-official.vercel.app/api/posts');
     return{
       props : { posts : data }
     }
