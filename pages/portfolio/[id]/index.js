@@ -2,7 +2,7 @@ import axios from "axios"
 import SlideUp2Ani from "../../../motion/slideUp2Ani"
 import SlideRight from "../../../motion/slideRight"
 import Link from "next/link"
-import { Box, Heading, Image, Flex, Button, Link as Atag } from "@chakra-ui/react"
+import { Box, Heading, Image, Flex, Button, Badge, Link as Atag } from "@chakra-ui/react"
 import { useColorMode } from "@chakra-ui/react"
 
 const Index = ({data}) => {
@@ -30,15 +30,14 @@ const Index = ({data}) => {
                         </Box>
                     </Box>
                     <Heading as='h3' size='md'>🧑🏻‍💻 Skill</Heading>
-                    <Flex flexWrap='wrap' p='10px 0 30px 0'>
+                    <Flex flexWrap='wrap' p='20px 0 40px 0'>
                         
                         {
                             data.skills.map((s, idx) => 
 
-                                <Button key={s+idx} bg="purple.400" size="sm" fontSize='1em' color='#fff' m='0.25em' 
-                                borderRadius='full' _hover={{ bg : 'purple.500'}} _focus={false}>
+                                <Badge key={s+idx} colorScheme='red' fontSize='lg' m='0 10px 0 0'>
                                     {s}
-                                </Button>)
+                                </Badge>)
 
                         }
 
