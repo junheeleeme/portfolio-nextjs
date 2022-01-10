@@ -4,16 +4,16 @@ const index = ()=> {
 
   return (    
     <Box>
-      <Heading as='h2' fontSize='1.3em'   w='100%' p='10px' letterSpacing='0.05em' color='white' 
-        textAlign='center' bg='blackAlpha.400' borderRadius='8px' wordBreak='keep-all'>
+      <Heading as='h2' fontSize='1.3em'   w='100%' p='0.5em' letterSpacing='0.05em' color='white' 
+        textAlign='center' bg='blackAlpha.400' borderRadius='8px' wordBreak='keep-all' boxShadow='rgba(99, 99, 99, 0.2) 0px 2px 8px 0px'>
             안녕하세요.👋 프론트엔드 개발자를 지향하는 이준희입니다.
-        </Heading>
+      </Heading>
 
       <Wrap p='40px 0' justify='center'>
 
         <WrapItem> 
           <Center w={{base : '100%', md : '550px'}} p='10px'>
-            <UnorderedList spacing={3} fontSize='1.2em'>
+            <UnorderedList spacing={3} fontSize='1.15em' wordBreak='keep-all'>
               <ListItem>
                 변화와 도전을 통해 성장하며 유연한 사고를 위해 끊임없이 배우려는 개발자입니다.
               </ListItem>
