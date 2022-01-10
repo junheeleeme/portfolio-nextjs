@@ -48,11 +48,16 @@ const index = ({posts})=> {
 }
 
 export const getServerSideProps = async() => {
-
-  const { data } = await axios('http://localhost/api/posts');
-
-  return{
+  try{
+    const { data } = await axios('http://localhost/api/posts');
+    return{
       props : { posts : data }
+    }
+  }catch(err){
+    console.log(err);
+    return{
+      props : { posts : null }
+    }
   }
 }
 

@@ -25,7 +25,7 @@ export default async function posts(req, res) {
       res.status(200).send(postList);
 
     } catch(err){
-      res.status(200).send(undefined);
+      res.status(200).send(null);
       console.log(err);
     }
     

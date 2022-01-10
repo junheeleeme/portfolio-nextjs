@@ -6,7 +6,8 @@ const Content_List = ({posts}) => {
     return(
         <Box>
             {
-                posts === undefined ?
+                posts === null 
+                    ?
                 <Spinner/>
                     :
                 <>    
