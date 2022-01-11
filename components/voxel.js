@@ -39,7 +39,6 @@ const Voxel = () => {
 
     return(
         <>
-            <Box w='100%' h='450px' m='-60px 0 -80px 0' position='relative'>
                 {
                     loaded === false ?
                     <Center position='absolute' top='0' left='0' w='100%' h='100%' zIndex='9999'>
@@ -57,7 +56,6 @@ const Voxel = () => {
                     auto-rotate-delay='0' rotation-per-second={speedTable[0]+'deg'} exposure='1'
                     style={{width : '100%', height : '450px' ,'--progress-bar-height' : '0' , '--progress-mask' : 'none', '--poster-color':  'transparent' }} />
                 </Box>
-            </Box>
             {/* <Button onClick={Init}>Test</Button> */}
             {/* <Button onClick={setInit}>Set Init</Button> */}
         </>

@@ -19,8 +19,10 @@ const Layout = ({children}) => {
             <Header/>
             <Box position='relative' w='100vw' minH='100vh' p='60px 0 30px' bg={ colorMode === 'light' ? 'gray.50' : 'gray.700'}> 
                 <Box position='relative' maxW='800px'>
-
-                    <NoSsr_Voxel/>
+                    
+                    <Box w='100%' h='450px' m='-60px 0 -80px 0' position='relative'>
+                        <NoSsr_Voxel/>
+                    </Box>
 
                     <SlideUpAni>
                         {children}           
