@@ -42,7 +42,7 @@ const Voxel = () => {
                 {
                     loaded === false ?
                     <Center position='absolute' top='0' left='0' w='100%' h='100%' zIndex='9999'>
-                        <Spinner thickness='4px' speed='0.65s' color='gray.800' emptyColor='gray.300' size='xl' />
+                        <Spinner thickness='4px' speed='0.8s' color='gray.800' emptyColor='gray.300' size='xl' />
                     </Center>
                     :
                     <></>
