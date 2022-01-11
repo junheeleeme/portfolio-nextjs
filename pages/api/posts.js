@@ -15,7 +15,7 @@ export default async function posts(req, res) {
       for(let i=1 ; i<4 ; i++){
         postList.push({
           title : $post.find(`.postArt:nth-child(${i}) > .post-link > .postSub > h3`).text(),
-          thumb : $post.find(`.postArt:nth-child(${i}) > .post-link > .thumbnail-wrap > img`).attr('src'),
+          thumb : $post.find(`.postArt:nth-child(${i}) > .post-link > .thumbnail-wrap > img`).attr('data-src'),
           link : $post.find(`.postArt:nth-child(${i}) > a`).attr('href'),
           cate : $post.find(`.postArt:nth-child(${i}) > .post-link > .postSub .postCate`).text(),
           date : $post.find(`.postArt:nth-child(${i}) > .post-link > .postSub .postDate`).text(),
