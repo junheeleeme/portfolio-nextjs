@@ -23,7 +23,7 @@ const Index = ({data}) => {
                 <SlideUp2Ani>
                     <Box>
                         <Box display='block' w='100%'>
-                            <Image src={data.gif} alt={data.title} w='100%' h='auto' m='20px auto'/>
+                            <Image src={data.gif} alt={data.title} w='100%' h='auto' m='20px auto' borderRadius='5px'/>
                         </Box>
                         <Box fontSize='1.1em' p='20px 3px 40px 3px'>
                             {data.content}
@@ -35,7 +35,7 @@ const Index = ({data}) => {
                         {
                             data.skills.map((s, idx) => 
 
-                                <Badge key={s+idx} colorScheme='red' fontSize='lg' m='0 10px 0 0'>
+                                <Badge key={s+idx} colorScheme='red' fontSize='lg' m='10px 10px 0 0'>
                                     {s}
                                 </Badge>)
 

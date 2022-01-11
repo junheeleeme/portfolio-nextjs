@@ -4,7 +4,7 @@ import Content_List from "../components/content_list"
 
 const index = ({posts})=> {
 
-  return (    
+  return (
     <Box>
       <Heading as='h2' w='100%' p={{base : '10px', md : '10px'}} color='white' letterSpacing='0.05em' userSelect='none'
         fontFamily='SBAggroM' fontSize={{base : '1.25em', md : '1.35em'}} lineHeight={{base: '1.33', md : 'normal'}} 

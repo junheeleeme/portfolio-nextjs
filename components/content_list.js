@@ -2,7 +2,7 @@ import Link from "next/link"
 import { SimpleGrid, Box, Link as LinkStyled, Text, Button, Image, Heading, Spinner, Center } from '@chakra-ui/react'
 
 const Content_List = ({posts}) => {
-    console.log(posts);
+
     return(
         <Box>
             {
@@ -40,8 +40,7 @@ const Content_List = ({posts}) => {
                         </Box>
                     )
                 }
-
-                <Box display={{base:'none', sm: 'block', md:'none'}} position='relative' w='100%'>
+                <Box display={{base:'none', sm: 'block', md:'none'}} position='relative' w='100%' borderRadius='7px' transition='background 0.4s ease' _hover={{bg:'gray.200'}}>
                     <Link href='https://juni-official.tistory.com' passHref>
                         <LinkStyled target='_blank' display='inline-block' w='100%' height='100%' fontSize="1.1em">
                             <Text position='absolute' top='50%' left='50%' transform='translate(-50%, -50%)'>더보기</Text>
@@ -54,7 +53,8 @@ const Content_List = ({posts}) => {
                 <Box p={{base: '15px', sm: '0', md: '0 0 20px 0'}}>
                     <Link href='https://juni-official.tistory.com' passHref>
                         <LinkStyled _hover={false} target='_blank'>
-                            <Button display={{base: 'block', sm: 'none', md:'block'}} w='100%' variant='outline'>더보기</Button>
+                            <Button display={{base: 'block', sm: 'none', md:'block'}} w='100%' variant='outline' borderRadius='4px'
+                            _focus={false} _hover={{bg: 'gray.400', color : 'white'}} borderColor='gray.400'>더보기</Button>
                         </LinkStyled>
                     </Link>
                 </Box>
