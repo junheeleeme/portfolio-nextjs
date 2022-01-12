@@ -4,7 +4,6 @@ import SubTitle from '../components/subtitle.js'
 import { SimpleGrid } from '@chakra-ui/react'
 import PortfolioArticle from "../components/portfolioArticle.js"
 
-
 const portfolio = ({data}) => {
 
     return(
@@ -28,7 +27,8 @@ const portfolio = ({data}) => {
 export const getStaticProps = async() => {
 
     try{
-        const res = await axios.get('https://www.juni-official.com/pofolList.json');
+        const res = await axios.get('https://tistory4.daumcdn.net/tistory/3617178/skin/images/pofol.json');
+        
         if(res.status === 200){
             const data = res.data;
             

@@ -62,7 +62,7 @@ const Index = ({data}) => {
 }
 
 export const getStaticPaths = async() => {
-    const res = await axios.get('https://www.juni-official.com/pofolList.json');
+    const res = await axios.get('https://tistory4.daumcdn.net/tistory/3617178/skin/images/pofol.json');
     const paths = res.data.map(p => {
         return{
             params : { id : (p.id+1).toString() }
@@ -76,7 +76,7 @@ export const getStaticProps = async ({params}) => {
     const {id} = params;
 
     try{
-        const res = await axios.get('https://www.juni-official.com/pofolList.json');
+        const res = await axios.get('https://tistory4.daumcdn.net/tistory/3617178/skin/images/pofol.json');
         
         if(res.status === 200){
             const _data = res.data;
