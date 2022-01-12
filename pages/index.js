@@ -50,6 +50,7 @@ const index = ({posts})=> {
 export const getStaticProps = async() => {
   try{
     const { data } = await axios('http://juni-official.vercel.app/api/posts');
+    // const { data } = await axios('/pofol/pofolList.json');
     return{
       props : { posts : data },
       revalidate: 3600
