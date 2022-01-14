@@ -20,7 +20,7 @@ const MyApp = ({ Component, pageProps }) => {
     <>
       <HeadInfo />
       <Script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"/>  
-
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-7YXKTBES0Q" />
       <ChakraProvider theme={theme} colorModeManager={colorModeManager}>
         <Layout>        
           <Component {...pageProps}/>

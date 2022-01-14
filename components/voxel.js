@@ -47,17 +47,18 @@ const Voxel = () => {
                     :
                     <></>
                 }
-                {/* disable-zoom='false' */}
-                <Box position='relative' opacity={loaded === true ? '1' : '0'} transition='opacity .4s ease'>
+
+                <Box position='relative' opacity={loaded === true ? '1' : '0'} transition='opacity .4s ease'
+                width={{base: '340px', sm : 'calc(100% - 30px)', md: '100%'}} height={{base: '340px', sm : '400px', md: '500px'}}>
+
                     <model-viewer ref={view} src='/juni-coding-voxel.gltf' camera-controls  autoplay auto-rotate
                     shadow-intensity="2.5" shadow-softness='1' alt='꾸생 아바타' camera-orbit='150deg 65deg 110%' 
                     environment-image='neutral' interaction-prompt='none' min-field-of-view='10deg' max-field-of-view='130deg'
                     max-camera-orbit="Infinity 180deg auto" min-camera-orbit='-Infinity 0deg auto' interpolation-decay='30'
                     auto-rotate-delay='0' rotation-per-second={speedTable[0]+'deg'} exposure='1'
-                    style={{width : '100%', height : '450px' ,'--progress-bar-height' : '0' , '--progress-mask' : 'none', '--poster-color':  'transparent' }} />
+                    style={{'width': '100%', 'height' : '100%' , '--progress-bar-height' : '0' , '--progress-mask' : 'none', '--poster-color':  'transparent' }} />
+
                 </Box>
-            {/* <Button onClick={Init}>Test</Button> */}
-            {/* <Button onClick={setInit}>Set Init</Button> */}
         </>
     )
 }
