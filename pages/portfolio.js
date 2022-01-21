@@ -27,11 +27,12 @@ const portfolio = ({data}) => {
 export const getStaticProps = async() => {
 
     try{
-        const res = await axios.get('https://tistory4.daumcdn.net/tistory/3617178/skin/images/pofol.json');
+        const res = await axios.get('http://localhost:8080/api/portfolio');
         
         if(res.status === 200){
-            const data = res.data;
+            const data = res.data.pofol;
             
+            console.log(data)
             return { props : {
                 data
             } }
