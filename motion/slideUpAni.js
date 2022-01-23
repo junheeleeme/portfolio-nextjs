@@ -10,8 +10,8 @@ const SlideUpAni = ({children}) => {
     return(
         <>
             <AnimatePresence exitBeforeEnter={true}> 
-                <motion.main key={router.route} transition={{ ease: "easeInOut", duration: 0.3 }}
-                initial={animate.initial} animate={animate.animate} exit={animate.exit} style={{overflow: 'hidden'}}>
+                <motion.main key={router.route} transition={{ ease : [0.17, 0.67, 0.83, 0.67], duration: 0.3 }}
+                initial={animate.initial} animate={animate.animate} exit={animate.exit} style={{overflow: 'hidden', minHeight : '600px'}}>
                     
                         {children}
 
@@ -24,17 +24,17 @@ const SlideUpAni = ({children}) => {
 
 const animate = {
     initial :{ //none use
-        transform : `translateY(50px)`,
+        transform : `translateX(50px)`,
         opacity : 0,
         padding: '15px',
     },
     animate : {
-        transform : `translateY(0px)`,
+        transform : `translateX(0px)`,
         opacity: 1,
         padding: '15px',
     },
     exit : {
-        transform : `translateY(40px)`,
+        transform : `translateX(40px)`,
         opacity: 0,
         padding: '15px',
     }
