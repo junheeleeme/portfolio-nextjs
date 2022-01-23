@@ -24,17 +24,17 @@ const SlideUpAni = ({children}) => {
 
 const animate = {
     initial :{ //none use
-        transform : `translateX(50px)`,
+        transform : `translateY(50px)`,
         opacity : 0,
         padding: '15px',
     },
     animate : {
-        transform : `translateX(0px)`,
+        transform : `translateY(0px)`,
         opacity: 1,
         padding: '15px',
     },
     exit : {
-        transform : `translateX(40px)`,
+        transform : `translateY(40px)`,
         opacity: 0,
         padding: '15px',
     }

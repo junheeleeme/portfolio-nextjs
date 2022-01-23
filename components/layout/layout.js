@@ -27,7 +27,7 @@ const Layout = ({children}) => {
                     <SlideUpAni>
                         {children}           
                     </SlideUpAni>
-                    
+
                 </Box>
                 <Footer/>
             </Box>

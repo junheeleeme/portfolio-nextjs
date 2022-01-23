@@ -11,7 +11,7 @@ const Index = ({data}) => {
 
     return(
         <>
-            <Box as='section'>
+            <Box as='section' minH='700px'>
                 <SlideRight>
                     <Heading as='h2' display='block' position='relative' size='lg' pb='30px' textOverflow='ellipsis' overflow='hidden' 
                         whiteSpace='nowrap' borderBottomColor='colors.end'>
@@ -20,7 +20,7 @@ const Index = ({data}) => {
                     </Heading>
                 </SlideRight>
 
-                <SlideUp2Ani>
+                {/* <SlideUp2Ani> */}
                     <Box>
                         <Box display='block' w='100%'>
                             <Image src={data.gif} alt={data.title} w='100%' h='auto' m='20px auto' borderRadius='5px'/>
@@ -55,7 +55,7 @@ const Index = ({data}) => {
                             </Atag>
                         </Link>
                     </Flex>
-                </SlideUp2Ani>
+                {/* </SlideUp2Ani> */}
             </Box>      
         </>
     )
