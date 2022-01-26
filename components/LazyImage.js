@@ -9,7 +9,7 @@ const LazyImage = ({src, alt}) => {
 
     return(
         <>
-            <Images src={src} alt={alt} onLoad={onLoadImg} width='100%' height='auto' opacity='0' transition="opacity 1s ease" />
+            <Images src={src} alt={alt} onLoad={onLoadImg} width='100%' height='100%' opacity='0' transition="opacity 1s ease" />
         </>
     )
 }
