@@ -1,6 +1,6 @@
 import axios from "axios"
-import SlideUp2Ani from "../../../motion/slideUp2Ani"
 import SlideRight from "../../../motion/slideRight"
+import LazyImage from "../../../components/LazyImage"
 import Link from "next/link"
 import { Box, Heading, Image, Flex, Button, Badge, Link as Atag } from "@chakra-ui/react"
 import { useColorMode } from "@chakra-ui/react"
@@ -22,8 +22,9 @@ const Index = ({data}) => {
 
                 {/* <SlideUp2Ani> */}
                     <Box>
-                        <Box display='block' w='100%'>
-                            <Image src={data.gif} alt={data.title} w='100%' h='auto' m='20px auto' borderRadius='5px'/>
+                        <Box display='block' w='100%' p="20px">
+                            <LazyImage src={data.gif} alt={data.title} />
+                            {/* <Image src={data.gif} alt={data.title} m='20px auto' borderRadius='5px'/> */}
                         </Box>
                         <Box fontSize='1.1em' p='20px 3px 40px 3px'>
                             {data.content}
@@ -35,9 +36,9 @@ const Index = ({data}) => {
                         {
                             data.skills.map((s, idx) => 
 
-                                <Badge key={s+idx} colorScheme='red' fontSize='lg' m='10px 10px 0 0'>
-                                    {s}
-                                </Badge>)
+                            <Badge key={s+idx} colorScheme='red' fontSize='lg' m='10px 10px 0 0'>
+                                {s}
+                            </Badge>)
 
                         }
 
