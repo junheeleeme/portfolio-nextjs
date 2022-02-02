@@ -12,15 +12,14 @@ const Index = ({data}) => {
     return(
         <>
             <Box as='section' minH='700px'>
-                <SlideRight>
+
                     <Heading as='h2' display='block' position='relative' size='lg' pb='30px' textOverflow='ellipsis' overflow='hidden' 
                         whiteSpace='nowrap' borderBottomColor='colors.end'>
                         {data.title} - {data.type}
                         <Box position='absolute' top='43px' left='30px' w='100%' h='1px' bg={colorMode==='light'? '#000':'#fff'}/>
                     </Heading>
-                </SlideRight>
 
-                {/* <SlideUp2Ani> */}
+
                     <Box>
                         <Box display='block' w='100%' p="20px">
                             <LazyImage src={data.gif} alt={data.title} />
@@ -56,7 +55,7 @@ const Index = ({data}) => {
                             </Atag>
                         </Link>
                     </Flex>
-                {/* </SlideUp2Ani> */}
+
             </Box>      
         </>
     )
@@ -90,7 +89,8 @@ export const getStaticProps = async ({params}) => {
         }
     }catch(err){
         console.log(err);
-        return { props: {} };
+        return { props: {},
+                notFound : true };
     }
 }
 
