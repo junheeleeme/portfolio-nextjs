@@ -78,7 +78,7 @@ const SkillStack = () => {
                 <Heading as='h3' fontSize='inherit' fontWeight='bold'>관심있는 기술 스택</Heading>
             </HStack>
 
-            <Center p={{base : '10px 0 20px 0', lg : '20px 0 30px'}} minH='160px' flexWrap='wrap' justifyContent='space-around'>    
+            <Center p={{base : '10px 0 10px 0', lg : '20px 0 20px'}} minH='160px' flexWrap='wrap' justifyContent='space-around'>    
                 <Center>
                     <Tooltip label='Svelte'>
                         <Box className='svgWrap'><SiSvelte color="#ff3b00" /></Box>

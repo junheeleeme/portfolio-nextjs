@@ -11,7 +11,7 @@ const Index = ({data}) => {
 
     return(
         <>
-            <Box as='section' minH='700px'>
+            <Box as='section'>
 
                     <Heading as='h2' display='block' position='relative' size='lg' pb='30px' textOverflow='ellipsis' overflow='hidden' 
                         whiteSpace='nowrap' borderBottomColor='colors.end'>

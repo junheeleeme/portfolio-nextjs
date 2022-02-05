@@ -26,17 +26,17 @@ const animate = {
     initial :{ //none use
         transform : `translateY(50px)`,
         opacity : 0,
-        padding: '15px',
+        padding: '15px 15px 40px 15px',
     },
     animate : {
         transform : `translateY(0px)`,
         opacity: 1,
-        padding: '15px',
+        padding: '15px 15px 40px 15px',
     },
     exit : {
         transform : `translateY(40px)`,
         opacity: 0,
-        padding: '15px',
+        padding: '15px 15px 40px 15px',
     }
 }
 
