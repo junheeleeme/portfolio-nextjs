@@ -28,7 +28,7 @@ const contact = () => {
     return(
         <>
             <HeadInfo title='Contact' />
-            <Box p='relative' pb='40px'>
+            <Box p='relative' pb='0px'>
                 <SubTitle txt='Contact' />
 
                 <Heading as='h3' size='2xl' p={{base: '30px 0 30px', lg: '150px 0 30px'}} wordBreak='keep-all' lineHeight='1.2em'>방문해 주셔서 감사합니다.</Heading>
