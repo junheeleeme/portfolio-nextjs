@@ -25,7 +25,7 @@ const skill = () => {
                 {/* Skill Stack */}
                 <SkillStack/>
             
-                <Center p='20px 0 30px 0'>
+                <Center p='20px 0' m={{base: '20px 0 40px', md:'40px 0 60px'}}>
                     <List spacing={3} fontSize='1.2em'>
                         {
                             skills.map((s, idx) =>
