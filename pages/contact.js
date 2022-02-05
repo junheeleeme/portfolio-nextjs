@@ -31,7 +31,7 @@ const contact = () => {
             <Box p='relative' pb='0px'>
                 <SubTitle txt='Contact' />
 
-                <Heading as='h3' size='2xl' p={{base: '30px 0 30px', lg: '150px 0 30px'}} wordBreak='keep-all' lineHeight='1.2em'>방문해 주셔서 감사합니다.</Heading>
+                <Heading as='h3' size='2xl' p={{base: '30px 0 30px', sm: '150px 0 30px'}} wordBreak='keep-all' lineHeight='1.2em'>방문해 주셔서 감사합니다.</Heading>
                 <List spacing={2} fontSize="1.1em">
                     <ListItem>
                         🧑🏻  이준희(Lee JunHee)
