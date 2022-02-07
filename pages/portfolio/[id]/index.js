@@ -1,8 +1,7 @@
 import axios from "axios"
-import SlideRight from "../../../motion/slideRight"
 import LazyImage from "../../../components/LazyImage"
 import Link from "next/link"
-import { Box, Heading, Image, Flex, Button, Badge, Link as Atag } from "@chakra-ui/react"
+import { Box, Heading, Flex, Button, Badge, Link as Atag } from "@chakra-ui/react"
 import { useColorMode } from "@chakra-ui/react"
 
 const Index = ({data}) => {
@@ -11,7 +10,7 @@ const Index = ({data}) => {
 
     return(
         <>
-            <Box as='section'>
+            <Box as='section' className="portfolio-wrap">
 
                     <Heading as='h2' display='block' position='relative' size='lg' pb='30px' textOverflow='ellipsis' overflow='hidden' 
                         whiteSpace='nowrap' borderBottomColor='colors.end'>
@@ -25,9 +24,20 @@ const Index = ({data}) => {
                             <LazyImage src={data.gif} alt={data.title} />
                             {/* <Image src={data.gif} alt={data.title} m='20px auto' borderRadius='5px'/> */}
                         </Box>
-                        <Box fontSize='1.1em' p='20px 3px 40px 3px'>
-                            {data.content}
-                        </Box>
+                        {
+                            data.html &&
+                            <>
+                                <div dangerouslySetInnerHTML={{__html : data.html}} />
+                            </>
+
+                        }
+                        {
+                            !data.html &&
+                            <Box fontSize='1.1em' p='20px 3px 40px 3px'>
+                                {data.content}
+                            </Box>
+                        }
+                        
                     </Box>
                     <Heading as='h3' size='md'>🧑🏻‍💻 Skill</Heading>
                     <Flex flexWrap='wrap' p='20px 0 40px 0'>
