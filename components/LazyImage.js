@@ -1,5 +1,5 @@
 import { Image as Images } from "@chakra-ui/react";
-
+import { createContext } from "react";
 
 const LazyImage = ({src, alt}) => {
 

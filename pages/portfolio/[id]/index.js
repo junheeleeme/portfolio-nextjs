@@ -54,7 +54,7 @@ const Index = ({data}) => {
                     </Flex>
                     <Heading as='h3' size='md'>🔗 Link</Heading>
                     <Flex flexWrap='nowrap' p='10px 0'>
-                        <Link href={data.link[1]} passHref>
+                        <Link href={data.link[0]} passHref>
                             <Atag target="_blank" w='100%' m='0 3px' _hover={false}>
                                 <Button size='md' w='100%' bg='blue.500' color="#fff" _focus={false} _active={false} _hover={{bg:'blue.600'}}>GitHub</Button>                            
                             </Atag>
