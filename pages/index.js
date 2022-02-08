@@ -12,9 +12,9 @@ const index = ({posts})=> {
             안녕하세요.👋 프론트엔드 개발자를 지향하는 이준희입니다.
       </Heading>
 
-      <Wrap p={{base: '30px 0', md : '30px 0px'}} justify='center'>
+      <Wrap p={{base: '30px 0', md : '30px 0px'}} justify='center' alignItems="center !important">
 
-        <WrapItem> 
+        <Box as='li' display="flex" justifyContent="justify-content" > 
           <Center w={{base : '100%', md : '550px'}} p='10px'>
             <UnorderedList spacing={3} fontSize='1.15em' wordBreak='keep-all'>
               <ListItem>
@@ -28,7 +28,7 @@ const index = ({posts})=> {
               </ListItem>
             </UnorderedList>
           </Center>
-        </WrapItem>
+        </Box>
 
         <WrapItem p={{base: '30px 0', md: '0'}} w={{ base : '100%', md:'180px'}} >
           <Center borderRadius='50%' overflow='hidden' m='auto'>
