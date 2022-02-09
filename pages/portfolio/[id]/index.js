@@ -5,7 +5,7 @@ import { Box, Heading, Flex, Button, Badge, Link as Atag } from "@chakra-ui/reac
 import { useColorMode } from "@chakra-ui/react"
 
 const Index = ({data}) => {
-
+    
     const {colorMode} = useColorMode();
 
     return(
