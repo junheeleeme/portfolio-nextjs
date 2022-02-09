@@ -25,6 +25,7 @@ const HeadInfo = ({title, keyword, content}) => {
             <meta property="og:type" content="website" />
             <meta property="og:image" content="https://www.juni-official.com/static/media/logo.06f29f67.png"></meta>
             <meta name="naver-site-verification" content="e69fd3cdf360b7e0ad6743948aac856c7014fadb" />
+
             <title>{headInfo._title}</title>
         </Head>
     )

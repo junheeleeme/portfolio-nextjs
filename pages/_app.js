@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 import HeadInfo from '../components/headInfo.js'
 import Script from 'next/script'
+import GoogleAnalyticsHOC from '../components/googleAnalytics'
 
 import "swiper/css"
 import "swiper/css/effect-coverflow"
@@ -19,13 +20,17 @@ const MyApp = ({ Component, pageProps }) => {
   return (
     <>
       <HeadInfo />
-      <Script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"/>  
-      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-7YXKTBES0Q" />
+      <Script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"/>
+
+      <GoogleAnalyticsHOC>
       <ChakraProvider theme={theme} colorModeManager={colorModeManager}>
-        <Layout>        
-          <Component {...pageProps}/>
-        </Layout>
+      
+          <Layout>        
+            <Component {...pageProps}/>
+          </Layout>
+
       </ChakraProvider>
+      </GoogleAnalyticsHOC>
     </>
   )
   
