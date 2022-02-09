@@ -1,4 +1,8 @@
 module.exports ={
+  i18n: {
+    locales: ["ko"],
+    defaultLocale: "ko",
+  },
   images: {
     domains: ['user-images.githubusercontent.com'],
   },
