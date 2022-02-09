@@ -18,13 +18,13 @@ const index = ({posts})=> {
           <Center w={{base : '100%', md : '550px'}} p='10px'>
             <UnorderedList spacing={3} fontSize='1.15em' wordBreak='keep-all'>
               <ListItem>
-                웹을 구현하고 더 나은 품질과 사용자 편의성을 추구하고 있습니다.
+                웹을 구현하고 더 나은 품질과 사용자 편의성을 추구합니다.
               </ListItem>
               <ListItem>
-                프론트엔드 뿐만 아니라 더 나아가 백엔드 분야에도 관심이 있습니다.
+                프론트엔드 뿐만 아니라 더 나아가 백엔드 분야에도 관심있습니다.
               </ListItem>
               <ListItem>
-                학습한 내용을 블로그에 기록하는 습관을 가지고 있습니다.
+                공부한 내용을 블로그에 기록하는 습관을 가지고 있습니다.
               </ListItem>
             </UnorderedList>
           </Center>
