@@ -61,7 +61,7 @@ const Index = ({data}) => {
                         </Link>
                         <Link href={data.link[1]} passHref>
                             <Atag target="_blank" w='100%' m='0 3px' _hover={false}>
-                                <Button size='md' w='100%' bg='blue.500' color="#fff" _focus={false} _active={false} _hover={{bg:'blue.600'}}>View</Button>
+                                <Button size='md' w='100%' bg='blue.500' color="#fff" _focus={false} _active={false} _hover={{bg:'blue.600'}}>Visit</Button>
                             </Atag>
                         </Link>
                     </Flex>
