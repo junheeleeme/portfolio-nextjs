@@ -9,7 +9,7 @@ const index = ({posts})=> {
       <Heading as='h2' w='100%' p={{base : '10px', md : '10px'}} color='white' letterSpacing='0.05em' userSelect='none'
         fontFamily='SBAggroM' fontSize={{base : '1.25em', md : '1.35em'}} lineHeight={{base: '1.33', md : 'normal'}} 
         textAlign='center' bg='blackAlpha.500' borderRadius='4px' wordBreak='keep-all' boxShadow='rgba(99, 99, 99, 0.2) 0px 2px 8px 0px'>
-            안녕하세요.👋 프론트엔드 개발자를 지향하는 이준희입니다.
+            안녕하세요.👋 이것저것 만들기 좋아하는 개발자입니다.
       </Heading>
 
       <Wrap p={{base: '30px 0', md : '30px 0px'}} justify='center' alignItems="center !important">
